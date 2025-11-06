@@ -290,22 +290,6 @@ class MediterraneanScrollAnimations {
 }
 
 // ==========================================
-// Parallax Hero Effect (Disabled for better scroll behavior)
-// ==========================================
-
-class ParallaxHero {
-    constructor() {
-        // Parallax disabled to prevent text scrolling under navbar too quickly
-        // this.hero = document.querySelector('.hero-mediterranean');
-        // this.init();
-    }
-
-    init() {
-        // Disabled
-    }
-}
-
-// ==========================================
 // Property Map Functionality
 // ==========================================
 
@@ -395,7 +379,8 @@ document.addEventListener('DOMContentLoaded', () => {
     new MediterraneanSmoothScroll();
     new FloatingNavbar();
     new MediterraneanScrollAnimations();
-    new ParallaxHero();
+    // Parallax removed for better scroll behavior
+    // new ParallaxHero();
     new MediterraneanPropertyMap();
     new CardEffects();
 

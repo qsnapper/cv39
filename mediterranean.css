@@ -174,7 +174,6 @@ img {
                 url('images/pool.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: scroll;
     position: relative;
     display: flex;
     align-items: center;
