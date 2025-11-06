@@ -212,7 +212,7 @@ class MediterraneanSmoothScroll {
 
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    const navbarHeight = 100; // Floating nav height
+                    const navbarHeight = 150; // Increased offset for better clearance
                     const targetPosition = targetElement.offsetTop - navbarHeight;
 
                     window.scrollTo({
@@ -290,23 +290,18 @@ class MediterraneanScrollAnimations {
 }
 
 // ==========================================
-// Parallax Hero Effect
+// Parallax Hero Effect (Disabled for better scroll behavior)
 // ==========================================
 
 class ParallaxHero {
     constructor() {
-        this.hero = document.querySelector('.hero-mediterranean');
-        this.init();
+        // Parallax disabled to prevent text scrolling under navbar too quickly
+        // this.hero = document.querySelector('.hero-mediterranean');
+        // this.init();
     }
 
     init() {
-        if (!this.hero) return;
-
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallaxSpeed = 0.5;
-            this.hero.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
-        });
+        // Disabled
     }
 }
 

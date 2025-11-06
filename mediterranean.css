@@ -174,12 +174,12 @@ img {
                 url('images/pool.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 120px 30px 80px;
+    padding: 120px 30px 120px;
     overflow: hidden;
 }
 
@@ -391,13 +391,13 @@ img {
    Section Styling
    ========================================== */
 section {
-    padding: 120px 0;
-    scroll-margin-top: 100px;
+    padding: 140px 0;
+    scroll-margin-top: 150px;
 }
 
 .section-intro {
     margin-bottom: 60px;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 .section-intro.center {
