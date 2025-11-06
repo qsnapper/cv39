@@ -232,6 +232,7 @@ class MediterraneanSmoothScroll {
 class FloatingNavbar {
     constructor() {
         this.navbar = document.querySelector('.floating-nav');
+        this.navContent = this.navbar.querySelector('.nav-content');
         this.init();
     }
 
@@ -239,10 +240,12 @@ class FloatingNavbar {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 this.navbar.style.transform = 'translateX(-50%) scale(0.95)';
-                this.navbar.querySelector('.nav-content').style.boxShadow = '0 15px 50px rgba(0, 119, 190, 0.25)';
+                this.navContent.style.boxShadow = '0 15px 50px rgba(0, 119, 190, 0.25)';
+                this.navContent.style.background = 'rgba(255, 255, 255, 1)';
             } else {
                 this.navbar.style.transform = 'translateX(-50%) scale(1)';
-                this.navbar.querySelector('.nav-content').style.boxShadow = '0 10px 40px rgba(0, 119, 190, 0.15)';
+                this.navContent.style.boxShadow = '0 10px 40px rgba(0, 119, 190, 0.15)';
+                this.navContent.style.background = 'rgba(255, 255, 255, 0.98)';
             }
         });
     }

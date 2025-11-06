@@ -72,6 +72,7 @@ img {
     transform: translateX(-50%);
     z-index: 1000;
     animation: slideDown 0.6s ease;
+    transition: all 0.3s ease;
 }
 
 @keyframes slideDown {
@@ -86,7 +87,7 @@ img {
 }
 
 .nav-content {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
     padding: 15px 40px;
     border-radius: 50px;
@@ -94,6 +95,7 @@ img {
     display: flex;
     align-items: center;
     gap: 50px;
+    transition: all 0.3s ease;
 }
 
 .nav-logo {
@@ -168,7 +170,11 @@ img {
    ========================================== */
 .hero-mediterranean {
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--azure-blue) 0%, var(--light-azure) 100%);
+    background: linear-gradient(135deg, rgba(0, 119, 190, 0.85) 0%, rgba(79, 195, 247, 0.75) 100%),
+                url('images/pool.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     position: relative;
     display: flex;
     align-items: center;
@@ -184,7 +190,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.1;
+    opacity: 0.05;
     background-image:
         repeating-linear-gradient(0deg, transparent, transparent 100px, var(--pure-white) 100px, var(--pure-white) 102px),
         repeating-linear-gradient(90deg, transparent, transparent 100px, var(--pure-white) 100px, var(--pure-white) 102px),
@@ -385,11 +391,13 @@ img {
    Section Styling
    ========================================== */
 section {
-    padding: 100px 0;
+    padding: 120px 0;
+    scroll-margin-top: 100px;
 }
 
 .section-intro {
     margin-bottom: 60px;
+    padding-top: 20px;
 }
 
 .section-intro.center {
