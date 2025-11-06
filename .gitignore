@@ -60,3 +60,7 @@ pids
 # Claude Code MCP cache
 .claude/mcp-cache/
 .mcp.json
+
+# Image optimization
+images/originals/
+optimize-images.sh

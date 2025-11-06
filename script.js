@@ -299,6 +299,63 @@ class MobileMenu {
 }
 
 // ==========================================
+// Property Map Functionality
+// ==========================================
+
+class PropertyMap {
+    constructor() {
+        this.mapElement = document.getElementById('propertyMap');
+        this.coordinates = [37.1663858561094, -8.700731058466115];
+        this.init();
+    }
+
+    init() {
+        if (!this.mapElement) return;
+
+        // Wait for Leaflet to load
+        if (typeof L === 'undefined') {
+            console.error('Leaflet library not loaded');
+            return;
+        }
+
+        // Initialize map
+        this.map = L.map('propertyMap').setView(this.coordinates, 15);
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 19
+        }).addTo(this.map);
+
+        // Create custom icon for property marker
+        const customIcon = L.divIcon({
+            className: 'custom-marker',
+            html: '<div class="marker-pin"></div>',
+            iconSize: [30, 42],
+            iconAnchor: [15, 42]
+        });
+
+        // Add marker for property
+        const marker = L.marker(this.coordinates, { icon: customIcon }).addTo(this.map);
+
+        // Add popup with property info
+        marker.bindPopup(`
+            <div class="map-popup">
+                <h3>Colinas Verdes Villa</h3>
+                <p><strong>Reference:</strong> CV39</p>
+                <p><strong>Price:</strong> €1,095,000</p>
+                <p>4-bedroom luxury villa with pool</p>
+            </div>
+        `).openPopup();
+
+        // Fix map rendering issue
+        setTimeout(() => {
+            this.map.invalidateSize();
+        }, 100);
+    }
+}
+
+// ==========================================
 // Initialize All Components
 // ==========================================
 
@@ -311,6 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new ScrollAnimations();
     new PlaceholderImages();
     new MobileMenu();
+    new PropertyMap();
 
     console.log('Colinas Verdes Villa website initialized successfully!');
 });
