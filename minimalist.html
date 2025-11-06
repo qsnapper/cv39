@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxury 4-bedroom villa with pool in Colinas Verdes, Lagos - €1,095,000. Modern minimalist property showcase.">
+    <title>Villa Colinas Verdes 39 | Modern Living in Lagos</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="minimalist.css">
+</head>
+<body>
+    <!-- Minimal Navigation -->
+    <nav class="minimal-nav">
+        <div class="nav-wrapper">
+            <div class="nav-left">
+                <span class="nav-ref">CV39</span>
+            </div>
+            <div class="nav-center">
+                <a href="#story">Story</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#details">Details</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-right">
+                <span class="nav-price">€1.095M</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero - Full Bleed Image -->
+    <section class="hero-minimal">
+        <div class="hero-image-container">
+            <img src="images/pool.jpg" alt="Villa Pool" class="hero-image">
+        </div>
+        <div class="hero-text">
+            <h1 class="hero-title">Colinas Verdes<br>Sanctuary</h1>
+            <p class="hero-location">Lagos, Portugal</p>
+        </div>
+    </section>
+
+    <!-- Introduction - Asymmetric -->
+    <section class="intro-section">
+        <div class="intro-grid">
+            <div class="intro-text">
+                <span class="label">Introduction</span>
+                <h2 class="section-headline">Where modern comfort meets Portuguese charm</h2>
+                <div class="intro-body">
+                    <p>Nestled within the prestigious Colinas Verdes development, this four-bedroom villa represents a rare opportunity to own a piece of the Algarve's most coveted countryside.</p>
+                    <p>Spanning 2,064 square meters of mature gardens, the property offers a serene escape just ten minutes from the vibrant heart of Lagos.</p>
+                </div>
+            </div>
+            <div class="intro-stats">
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Bedrooms</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Bathrooms</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">260m²</div>
+                    <div class="stat-label">Built Area</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2,064m²</div>
+                    <div class="stat-label">Plot</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10×5m</div>
+                    <div class="stat-label">Pool</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">B</div>
+                    <div class="stat-label">Energy Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section - Editorial Style -->
+    <section id="story" class="story-section">
+        <div class="story-layout">
+            <div class="story-image-large">
+                <img src="images/living.jpg" alt="Living Space">
+                <span class="image-caption">Living Area</span>
+            </div>
+            <div class="story-content">
+                <span class="label">The Story</span>
+                <h2 class="editorial-headline">A home designed for living</h2>
+                <p>Every detail has been carefully considered. From the beamed ceilings that whisper of traditional Portuguese architecture to the contemporary fixtures that speak to modern sensibilities.</p>
+                <p>The villa unfolds across thoughtfully designed spaces—each room an invitation to pause, breathe, and simply be.</p>
+            </div>
+        </div>
+
+        <div class="story-layout-reverse">
+            <div class="story-content-right">
+                <h3 class="sub-headline">Outdoor Living</h3>
+                <p>The south-facing pool becomes the heart of outdoor life. Mature gardens offer privacy and shade, while multiple terraces provide spaces for morning coffee or evening gatherings under the stars.</p>
+            </div>
+            <div class="story-image-medium">
+                <img src="images/garden.jpg" alt="Garden View">
+                <span class="image-caption">Gardens</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery - Horizontal Scroll -->
+    <section id="gallery" class="gallery-section">
+        <div class="gallery-header">
+            <span class="label">Gallery</span>
+            <h2 class="section-headline">Visual Journey</h2>
+        </div>
+        <div class="horizontal-gallery">
+            <div class="gallery-item-h">
+                <img src="images/pool2.jpg" alt="Pool Area">
+            </div>
+            <div class="gallery-item-h">
+                <img src="images/master-bedroom.jpg" alt="Master Bedroom">
+            </div>
+            <div class="gallery-item-h">
+                <img src="images/kitchen.jpg" alt="Kitchen">
+            </div>
+            <div class="gallery-item-h">
+                <img src="images/dining.jpg" alt="Dining Room">
+            </div>
+            <div class="gallery-item-h">
+                <img src="images/outdoor.jpg" alt="Outdoor Space">
+            </div>
+            <div class="gallery-item-h">
+                <img src="images/gym.jpg" alt="Gym">
+            </div>
+            <div class="gallery-item-h">
+                <img src="images/front-entrance.jpg" alt="Entrance">
+            </div>
+            <div class="gallery-item-h">
+                <img src="images/garden2.jpg" alt="Garden Path">
+            </div>
+        </div>
+        <div class="gallery-footer">
+            <button class="btn-minimal" id="viewAllBtn">View All Images</button>
+        </div>
+    </section>
+
+    <!-- Details - Clean List -->
+    <section id="details" class="details-section">
+        <div class="details-grid">
+            <div class="details-column">
+                <span class="label">Interior</span>
+                <ul class="minimal-list">
+                    <li>Spacious entrance hall</li>
+                    <li>Expansive living room with beamed ceilings</li>
+                    <li>STUV designer fireplace</li>
+                    <li>Fully equipped Keller kitchen</li>
+                    <li>Premium Smeg & Siemens appliances</li>
+                    <li>Separate dining room</li>
+                    <li>Master suite with en-suite</li>
+                    <li>Three additional bedrooms</li>
+                    <li>Four bathrooms total</li>
+                    <li>Built-in wardrobes throughout</li>
+                    <li>Electric shutters</li>
+                    <li>Central heating</li>
+                </ul>
+            </div>
+
+            <div class="details-column">
+                <span class="label">Exterior</span>
+                <ul class="minimal-list">
+                    <li>South-facing pool (10×5m)</li>
+                    <li>2,064m² landscaped gardens</li>
+                    <li>Mature trees & plantings</li>
+                    <li>Multiple terraces</li>
+                    <li>Decorative fish pond</li>
+                    <li>Winding garden pathways</li>
+                    <li>Fully fenced & gated</li>
+                    <li>Automatic electric gates</li>
+                    <li>Carport & parking</li>
+                </ul>
+            </div>
+
+            <div class="details-column">
+                <span class="label">Amenities</span>
+                <ul class="minimal-list">
+                    <li>Private sauna facility</li>
+                    <li>Wooden cabin gym</li>
+                    <li>Office with mezzanine</li>
+                    <li>External laundry room</li>
+                    <li>Solar panels (hot water)</li>
+                    <li>Solar panels (electricity)</li>
+                    <li>Energy rating: B</li>
+                    <li>Mains water</li>
+                    <li>Mains electricity</li>
+                    <li>Septic tank drainage</li>
+                </ul>
+            </div>
+
+            <div class="details-column">
+                <span class="label">Location</span>
+                <ul class="minimal-list">
+                    <li>10 min to Lagos center</li>
+                    <li>Close to beaches</li>
+                    <li>Golf courses nearby</li>
+                    <li>Peaceful countryside</li>
+                    <li>Faro Airport accessible</li>
+                    <li>Restaurants & shopping</li>
+                    <li>International schools</li>
+                    <li>Healthcare facilities</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location - Map -->
+    <section class="location-section">
+        <div class="location-content">
+            <div class="location-info">
+                <span class="label">Location</span>
+                <h2 class="section-headline">Colinas Verdes, Lagos</h2>
+                <p class="location-text">A prestigious development offering tranquility and convenience. Ten minutes to historic Lagos, yet surrounded by countryside peace.</p>
+            </div>
+            <div class="location-map-wrapper">
+                <div id="propertyMap" class="minimal-map"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact - Minimal Form -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-intro">
+                <span class="label">Contact</span>
+                <h2 class="section-headline">Schedule a Viewing</h2>
+                <p class="contact-subtitle">We'd be delighted to show you this exceptional property.</p>
+
+                <div class="contact-details">
+                    <div class="contact-item-min">
+                        <span class="contact-label">Phone</span>
+                        <a href="tel:+351917566931" class="contact-link">+351 917 566 931</a>
+                    </div>
+                    <div class="contact-item-min">
+                        <span class="contact-label">Reference</span>
+                        <span class="contact-text">CV39</span>
+                    </div>
+                </div>
+            </div>
+
+            <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="minimal-form">
+                <input type="hidden" name="form-name" value="contact">
+                <p class="hidden">
+                    <label>Don't fill this out: <input name="bot-field"></label>
+                </p>
+
+                <div class="form-group-min">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+
+                <div class="form-group-min">
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="form-group-min">
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                </div>
+
+                <div class="form-group-min">
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit-min">Send Inquiry</button>
+                <div class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer - Minimal -->
+    <footer class="minimal-footer">
+        <div class="footer-content-min">
+            <div class="footer-left">
+                <span class="footer-ref">CV39 — Colinas Verdes Villa</span>
+            </div>
+            <div class="footer-right">
+                <a href="index.html" class="footer-link">View Classic Version</a>
+                <span class="footer-copy">© 2024</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-prev">&#10094;</span>
+        <span class="lightbox-next">&#10095;</span>
+        <img class="lightbox-image" src="" alt="">
+        <div class="lightbox-counter"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    <script src="minimalist.js"></script>
+</body>
+</html>
