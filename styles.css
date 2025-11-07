@@ -248,6 +248,96 @@ a:hover {
 }
 
 /* ==========================================
+   Owner Sale Banner
+   ========================================== */
+.owner-sale-banner {
+    background: linear-gradient(135deg, var(--primary-gold) 0%, var(--light-gold) 100%);
+    padding: 2rem 0;
+    border-top: 3px solid var(--dark-navy);
+    border-bottom: 3px solid var(--dark-navy);
+}
+
+.owner-banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.owner-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--dark-navy);
+    color: var(--white);
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.badge-icon {
+    width: 24px;
+    height: 24px;
+    stroke: var(--primary-gold);
+}
+
+.owner-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 900px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--dark-navy);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-icon {
+    width: 20px;
+    height: 20px;
+    stroke: var(--primary-gold);
+    flex-shrink: 0;
+}
+
+/* Owner Contact Badge in Contact Section */
+.owner-contact-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--primary-gold);
+    color: var(--dark-navy);
+    padding: 0.5rem 1.25rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(201, 169, 97, 0.3);
+}
+
+.owner-icon {
+    width: 20px;
+    height: 20px;
+    stroke: var(--dark-navy);
+}
+
+/* ==========================================
    Section Styling
    ========================================== */
 section {
@@ -856,6 +946,21 @@ section {
 
     .section-header h2 {
         font-size: 2rem;
+    }
+
+    .owner-benefits {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .owner-badge {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+
+    .benefit-item {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
     }
 
     .gallery-grid {
