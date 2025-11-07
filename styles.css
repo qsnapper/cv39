@@ -128,11 +128,12 @@ a:hover {
 .hero {
     position: relative;
     height: 100vh;
+    min-height: 500px;
     background: linear-gradient(135deg, var(--dark-navy) 0%, var(--medium-navy) 100%);
     background-image: url('images/hero-background.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -930,6 +931,12 @@ section {
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
+    }
+
+    /* iOS-specific hero fixes */
+    .hero {
+        min-height: 600px;
+        background-attachment: scroll;
     }
 
     .hero-title {
