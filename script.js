@@ -343,7 +343,7 @@ class PropertyMap {
             <div class="map-popup">
                 <h3>Colinas Verdes Villa</h3>
                 <p><strong>Reference:</strong> CV39</p>
-                <p><strong>Price:</strong> €1,095,000</p>
+                <p><strong>Price:</strong> €1,045,000</p>
                 <p>4-bedroom luxury villa with pool</p>
             </div>
         `).openPopup();
