@@ -77,3 +77,7 @@ next-env.d.ts
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
+
+# TinaCMS
+.tina/__generated__/
+tina/__generated__/

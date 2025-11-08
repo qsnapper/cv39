@@ -8,19 +8,23 @@ import Features from './components/Features'
 import Location from './components/Location'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import { getPropertyContent } from './lib/getContent'
 
-export default function Home() {
+export default async function Home() {
+  // Fetch content from TinaCMS
+  const content = await getPropertyContent('en')
+
   return (
     <>
       <Navigation />
-      <Hero />
-      <QuickFacts />
+      <Hero data={content.hero} />
+      <QuickFacts data={content.quickFacts} />
       <OwnerSaleBanner />
-      <Overview />
-      <Gallery />
-      <Features />
-      <Location />
-      <Contact />
+      <Overview data={content.overview} />
+      <Gallery images={content.gallery} />
+      <Features data={content.features} />
+      <Location data={content.location} />
+      <Contact data={content.contact} />
       <Footer />
     </>
   )
