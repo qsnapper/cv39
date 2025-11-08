@@ -1,12 +1,17 @@
-# Netlify Configuration File
+# Netlify Configuration File for Next.js
 # https://docs.netlify.com/configure-builds/file-based-configuration/
 
 [build]
-  # No build command needed for static site
-  publish = "."
+  command = "npm run build"
+  publish = ".next"
 
 [build.environment]
-  # Environment variables (if needed in the future)
+  NODE_VERSION = "22"
+  NPM_VERSION = "10"
+
+# Next.js specific settings
+[functions]
+  node_bundler = "esbuild"
 
 # Headers for better performance and security
 [[headers]]
@@ -24,24 +29,10 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.css"
+  for = "/_next/static/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# Redirect rules (if needed)
-[[redirects]]
-  from = "/index.html"
-  to = "/"
-  status = 301
-  force = false
-
-# 404 page (currently using default, can customize later)
-# [[redirects]]
-#   from = "/*"
-#   to = "/404.html"
-#   status = 404
+# Netlify form handling
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

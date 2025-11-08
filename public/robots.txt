@@ -1,0 +1,12 @@
+# Robots.txt for Colinas Verdes 39 Property Listing
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://your-domain.com/sitemap.xml
+
+# Disallow admin and API routes
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
