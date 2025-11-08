@@ -1,0 +1,145 @@
+{
+  "title": "Exquisite Countryside Villa",
+  "subtitle": "Colinas Verdes, Lagos, Portugal",
+  "price": "€1,045,000",
+  "hero_image": "images/pool.jpg",
+  "quick_facts": {
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "built_area": "298m²",
+    "plot_size": "2,064m²",
+    "pool_size": "10x5m"
+  },
+  "overview": {
+    "title": "A Rare Countryside Sanctuary",
+    "lead": "Discover this exceptional T4 villa nestled in the prestigious Colinas Verdes development in Portugal's stunning Algarve region, offering the perfect blend of countryside tranquility and urban convenience, just 10 minutes from the historic center of Lagos.",
+    "description1": "This distinguished property spans over 2,000 square meters of mature landscaped gardens, featuring a south-facing swimming pool, multiple secluded terraces, and a charming fish pond connected by winding pathways. The villa exemplifies refined Portuguese living with its spacious interiors, characterized by beamed ceilings, premium finishes, and an abundance of natural light.",
+    "description2": "Beyond its architectural elegance, this home offers exceptional lifestyle amenities including a private sauna, dedicated gym cabin, and a converted office space with mezzanine—ideal for modern remote working. Energy-efficient solar panels and a B energy rating underscore the property's commitment to sustainable luxury.",
+    "highlights": [
+      {"text": "Prime Location - 10 min to Lagos"},
+      {"text": "Private Pool & Mature Gardens"},
+      {"text": "Sauna & Gym Facilities"},
+      {"text": "Solar Panels & Energy Efficient"},
+      {"text": "Home Office with Mezzanine"},
+      {"text": "Fully Fenced & Gated"},
+      {"text": "Can be Sold Partially Furnished"}
+    ]
+  },
+  "owner_banner": {
+    "badge_text": "Direct from Owner",
+    "benefits": [
+      {"text": "No Agent Commission"},
+      {"text": "Direct Communication"},
+      {"text": "Faster Transaction"},
+      {"text": "Full Property Knowledge"}
+    ]
+  },
+  "features": {
+    "title": "Exceptional Features & Amenities",
+    "interior": {
+      "title": "Interior Excellence",
+      "items": [
+        "Spacious entrance hall with character",
+        "Expansive living room with beamed ceilings",
+        "STUV designer fireplace",
+        "Fully equipped kitchen with Keller furniture",
+        "Premium Smeg and Siemens appliances",
+        "Separate dining room",
+        "4 bedrooms with built-in wardrobes",
+        "Master suite with en-suite bathroom",
+        "3 additional bathrooms",
+        "High-quality double-glazed windows",
+        "Electric shutters throughout",
+        "Solid wood doors",
+        "Central heating system"
+      ]
+    },
+    "outdoor": {
+      "title": "Outdoor Living",
+      "items": [
+        "South-facing swimming pool (10x5m)",
+        "Walled pool area for privacy",
+        "2,064m² of mature landscaped gardens",
+        "Multiple secluded terraces",
+        "Decorative fish pond",
+        "Winding garden pathways",
+        "Mature trees throughout",
+        "Fully fenced property",
+        "Automatic electric gates",
+        "Carport and parking areas"
+      ]
+    },
+    "amenities": {
+      "title": "Premium Amenities",
+      "items": [
+        "Private sauna facility",
+        "Wooden cabin gym",
+        "Converted office space with mezzanine",
+        "External laundry room",
+        "Solar panels for hot water",
+        "Solar panels for electricity generation",
+        "Energy rating: B",
+        "Mains water connection",
+        "Mains electricity",
+        "Septic tank drainage"
+      ]
+    },
+    "lifestyle": {
+      "title": "Lifestyle Advantages",
+      "items": [
+        "Peaceful countryside setting",
+        "10 minutes to Lagos city center",
+        "Close to beaches and golf courses",
+        "Perfect for remote working",
+        "Ideal for entertaining guests",
+        "Low maintenance mature gardens",
+        "Privacy and security",
+        "Year-round sunshine enjoyment",
+        "Strong rental potential",
+        "Excellent investment opportunity"
+      ]
+    }
+  },
+  "location": {
+    "title": "Prime Location",
+    "name": "Colinas Verdes, Bensafrim, Lagos, Portugal",
+    "description": "Situated in the sought-after Colinas Verdes development in Portugal's Algarve, this property offers the best of both worlds—serene countryside living with immediate access to urban amenities.",
+    "additional_info": "Lagos is one of Portugal's Algarve region's most historic and charming cities, renowned for its stunning beaches, vibrant marina, excellent restaurants, and rich cultural heritage. The Colinas Verdes area provides a peaceful retreat while maintaining convenient access to all that this beautiful part of Portugal has to offer.",
+    "latitude": 37.1333,
+    "longitude": -8.6667,
+    "highlights": [
+      {"label": "Lagos City Center:", "value": "10 minutes"},
+      {"label": "Beaches:", "value": "Short drive to pristine Portugal's Algarve coastline"},
+      {"label": "Golf Courses:", "value": "Multiple championship courses nearby in Portugal"},
+      {"label": "Airport:", "value": "Faro International Airport, Portugal within easy reach"},
+      {"label": "Restaurants & Shopping:", "value": "Lagos offers excellent dining and retail"}
+    ]
+  },
+  "contact": {
+    "title": "Speak Directly with the Owner",
+    "subtitle": "Get authentic insights and arrange your private viewing directly",
+    "badge_text": "Direct Owner Contact",
+    "phone": "+351 917 566 931",
+    "reference": "CV39 - Colinas Verdes Villa",
+    "why_title": "Why Buy Direct?",
+    "benefits": [
+      "Save on agent commission fees",
+      "Get first-hand property knowledge",
+      "Flexible viewing schedules",
+      "Direct negotiation & faster decisions",
+      "Personal insights about the property & area",
+      "Negotiable price - open to reasonable offers",
+      "Option to purchase partially furnished"
+    ]
+  },
+  "navigation": {
+    "brand": "Colinas Verdes 39",
+    "menu": [
+      {"label": "Overview", "link": "#overview"},
+      {"label": "Gallery", "link": "#gallery"},
+      {"label": "Features", "link": "#features"},
+      {"label": "Location", "link": "#location"},
+      {"label": "Contact", "link": "#contact"}
+    ]
+  }
+}

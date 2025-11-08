@@ -1,0 +1,214 @@
+backend:
+  name: git-gateway
+  branch: claude/marketing-page-cms-options-011CUvFZRnSfGbhb6UoqQbM8
+
+# Publish mode - editorial workflow allows drafts
+publish_mode: editorial_workflow
+
+# Media files configuration
+media_folder: "images"
+public_folder: "images"
+
+# i18n configuration for multi-language support
+i18n:
+  structure: multiple_files
+  locales: [en, pt, fr, de]
+  default_locale: en
+
+# Collections define the content structure
+collections:
+  # Property information
+  - name: "property"
+    label: "Property Information"
+    folder: "content/property"
+    create: false
+    delete: false
+    i18n: true
+    slug: "{{slug}}"
+    fields:
+      # Hero Section
+      - {label: "Property Title", name: "title", widget: "string", i18n: true}
+      - {label: "Property Subtitle", name: "subtitle", widget: "string", i18n: true}
+      - {label: "Price", name: "price", widget: "string", i18n: true}
+      - {label: "Hero Image", name: "hero_image", widget: "image", i18n: duplicate}
+
+      # Quick Facts
+      - label: "Quick Facts"
+        name: "quick_facts"
+        widget: "object"
+        i18n: true
+        fields:
+          - {label: "Bedrooms", name: "bedrooms", widget: "number", i18n: duplicate}
+          - {label: "Bathrooms", name: "bathrooms", widget: "number", i18n: duplicate}
+          - {label: "Built Area", name: "built_area", widget: "string", i18n: duplicate}
+          - {label: "Plot Size", name: "plot_size", widget: "string", i18n: duplicate}
+          - {label: "Pool Size", name: "pool_size", widget: "string", i18n: duplicate}
+
+      # Overview Section
+      - label: "Overview"
+        name: "overview"
+        widget: "object"
+        i18n: true
+        fields:
+          - {label: "Section Title", name: "title", widget: "string", i18n: true}
+          - {label: "Lead Paragraph", name: "lead", widget: "text", i18n: true}
+          - {label: "Description Paragraph 1", name: "description1", widget: "text", i18n: true}
+          - {label: "Description Paragraph 2", name: "description2", widget: "text", i18n: true}
+          - label: "Highlights"
+            name: "highlights"
+            widget: "list"
+            i18n: true
+            fields:
+              - {label: "Highlight Text", name: "text", widget: "string", i18n: true}
+
+      # Owner Sale Banner
+      - label: "Owner Sale Banner"
+        name: "owner_banner"
+        widget: "object"
+        i18n: true
+        fields:
+          - {label: "Badge Text", name: "badge_text", widget: "string", i18n: true}
+          - label: "Benefits"
+            name: "benefits"
+            widget: "list"
+            i18n: true
+            fields:
+              - {label: "Benefit Text", name: "text", widget: "string", i18n: true}
+
+      # Features Section
+      - label: "Features"
+        name: "features"
+        widget: "object"
+        i18n: true
+        fields:
+          - {label: "Section Title", name: "title", widget: "string", i18n: true}
+          - label: "Interior Features"
+            name: "interior"
+            widget: "object"
+            i18n: true
+            fields:
+              - {label: "Category Title", name: "title", widget: "string", i18n: true}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                i18n: true
+                field: {label: "Feature", name: "feature", widget: "string", i18n: true}
+          - label: "Outdoor Features"
+            name: "outdoor"
+            widget: "object"
+            i18n: true
+            fields:
+              - {label: "Category Title", name: "title", widget: "string", i18n: true}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                i18n: true
+                field: {label: "Feature", name: "feature", widget: "string", i18n: true}
+          - label: "Amenities"
+            name: "amenities"
+            widget: "object"
+            i18n: true
+            fields:
+              - {label: "Category Title", name: "title", widget: "string", i18n: true}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                i18n: true
+                field: {label: "Feature", name: "feature", widget: "string", i18n: true}
+          - label: "Lifestyle Benefits"
+            name: "lifestyle"
+            widget: "object"
+            i18n: true
+            fields:
+              - {label: "Category Title", name: "title", widget: "string", i18n: true}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                i18n: true
+                field: {label: "Feature", name: "feature", widget: "string", i18n: true}
+
+      # Location Section
+      - label: "Location"
+        name: "location"
+        widget: "object"
+        i18n: true
+        fields:
+          - {label: "Section Title", name: "title", widget: "string", i18n: true}
+          - {label: "Location Name", name: "name", widget: "string", i18n: true}
+          - {label: "Description", name: "description", widget: "text", i18n: true}
+          - {label: "Additional Info", name: "additional_info", widget: "text", i18n: true}
+          - {label: "Latitude", name: "latitude", widget: "number", value_type: "float", i18n: duplicate}
+          - {label: "Longitude", name: "longitude", widget: "number", value_type: "float", i18n: duplicate}
+          - label: "Highlights"
+            name: "highlights"
+            widget: "list"
+            i18n: true
+            fields:
+              - {label: "Label", name: "label", widget: "string", i18n: true}
+              - {label: "Value", name: "value", widget: "string", i18n: true}
+
+      # Contact Section
+      - label: "Contact"
+        name: "contact"
+        widget: "object"
+        i18n: true
+        fields:
+          - {label: "Section Title", name: "title", widget: "string", i18n: true}
+          - {label: "Section Subtitle", name: "subtitle", widget: "string", i18n: true}
+          - {label: "Badge Text", name: "badge_text", widget: "string", i18n: true}
+          - {label: "Phone Number", name: "phone", widget: "string", i18n: duplicate}
+          - {label: "Property Reference", name: "reference", widget: "string", i18n: duplicate}
+          - {label: "Why Buy Direct Title", name: "why_title", widget: "string", i18n: true}
+          - label: "Benefits"
+            name: "benefits"
+            widget: "list"
+            i18n: true
+            field: {label: "Benefit", name: "benefit", widget: "string", i18n: true}
+
+      # Navigation
+      - label: "Navigation"
+        name: "navigation"
+        widget: "object"
+        i18n: true
+        fields:
+          - {label: "Brand Name", name: "brand", widget: "string", i18n: true}
+          - label: "Menu Items"
+            name: "menu"
+            widget: "list"
+            i18n: true
+            fields:
+              - {label: "Label", name: "label", widget: "string", i18n: true}
+              - {label: "Link", name: "link", widget: "string", i18n: duplicate}
+
+  # Gallery images configuration
+  - name: "gallery"
+    label: "Gallery"
+    folder: "content/gallery"
+    create: true
+    delete: true
+    i18n: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Image", name: "image", widget: "image", i18n: duplicate}
+      - {label: "Alt Text", name: "alt", widget: "string", i18n: true}
+      - {label: "Category", name: "category", widget: "select", options: ["exterior", "interior", "pool", "gardens"], i18n: duplicate}
+      - {label: "Order", name: "order", widget: "number", value_type: "int", i18n: duplicate}
+
+  # Site settings
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "General Settings"
+        name: "general"
+        file: "content/settings/general.json"
+        fields:
+          - {label: "Site Title", name: "site_title", widget: "string"}
+          - {label: "Meta Description", name: "meta_description", widget: "text"}
+          - {label: "Copyright Text", name: "copyright", widget: "string"}
+          - label: "Languages"
+            name: "languages"
+            widget: "list"
+            fields:
+              - {label: "Code", name: "code", widget: "string"}
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Flag", name: "flag", widget: "string"}

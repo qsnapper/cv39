@@ -1,0 +1,145 @@
+{
+  "title": "Vila Requintada no Campo",
+  "subtitle": "Colinas Verdes, Lagos, Portugal",
+  "price": "€1.045.000",
+  "hero_image": "images/pool.jpg",
+  "quick_facts": {
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "built_area": "298m²",
+    "plot_size": "2.064m²",
+    "pool_size": "10x5m"
+  },
+  "overview": {
+    "title": "Um Santuário Raro no Campo",
+    "lead": "Descubra esta villa T4 excecional situada no prestigiado empreendimento Colinas Verdes na deslumbrante região do Algarve em Portugal, oferecendo a combinação perfeita de tranquilidade campestre e conveniência urbana, a apenas 10 minutos do centro histórico de Lagos.",
+    "description1": "Esta propriedade distinta estende-se por mais de 2.000 metros quadrados de jardins paisagísticos maduros, apresentando uma piscina virada a sul, múltiplos terraços isolados e um encantador lago de peixes conectado por caminhos sinuosos. A villa exemplifica a vida portuguesa refinada com os seus interiores espaçosos, caracterizados por tetos com vigas, acabamentos premium e abundância de luz natural.",
+    "description2": "Além da sua elegância arquitetônica, esta casa oferece comodidades de estilo de vida excecionais, incluindo uma sauna privada, ginásio em cabana dedicada e um espaço de escritório convertido com mezanino—ideal para trabalho remoto moderno. Painéis solares eficientes em energia e uma classificação energética B sublinham o compromisso da propriedade com o luxo sustentável.",
+    "highlights": [
+      {"text": "Localização Premium - 10 min para Lagos"},
+      {"text": "Piscina Privada & Jardins Maduros"},
+      {"text": "Instalações de Sauna & Ginásio"},
+      {"text": "Painéis Solares & Eficiência Energética"},
+      {"text": "Escritório em Casa com Mezanino"},
+      {"text": "Totalmente Vedada & com Portão"},
+      {"text": "Pode ser Vendida Parcialmente Mobilada"}
+    ]
+  },
+  "owner_banner": {
+    "badge_text": "Diretamente do Proprietário",
+    "benefits": [
+      {"text": "Sem Comissão de Agente"},
+      {"text": "Comunicação Direta"},
+      {"text": "Transação Mais Rápida"},
+      {"text": "Conhecimento Completo da Propriedade"}
+    ]
+  },
+  "features": {
+    "title": "Características e Comodidades Excecionais",
+    "interior": {
+      "title": "Excelência Interior",
+      "items": [
+        "Hall de entrada espaçoso com caráter",
+        "Sala de estar ampla com tetos com vigas",
+        "Lareira de design STUV",
+        "Cozinha totalmente equipada com móveis Keller",
+        "Eletrodomésticos premium Smeg e Siemens",
+        "Sala de jantar separada",
+        "4 quartos com roupeiros embutidos",
+        "Suite principal com casa de banho privativa",
+        "3 casas de banho adicionais",
+        "Janelas de vidro duplo de alta qualidade",
+        "Estores elétricos em toda a casa",
+        "Portas de madeira maciça",
+        "Sistema de aquecimento central"
+      ]
+    },
+    "outdoor": {
+      "title": "Vida ao Ar Livre",
+      "items": [
+        "Piscina virada a sul (10x5m)",
+        "Área de piscina murada para privacidade",
+        "2.064m² de jardins paisagísticos maduros",
+        "Múltiplos terraços isolados",
+        "Lago de peixes decorativo",
+        "Caminhos de jardim sinuosos",
+        "Árvores maduras por toda parte",
+        "Propriedade totalmente vedada",
+        "Portões elétricos automáticos",
+        "Telheiro e áreas de estacionamento"
+      ]
+    },
+    "amenities": {
+      "title": "Comodidades Premium",
+      "items": [
+        "Instalação de sauna privada",
+        "Ginásio em cabana de madeira",
+        "Espaço de escritório convertido com mezanino",
+        "Lavandaria externa",
+        "Painéis solares para água quente",
+        "Painéis solares para geração de eletricidade",
+        "Classificação energética: B",
+        "Ligação à rede de água",
+        "Eletricidade da rede",
+        "Drenagem por fossa séptica"
+      ]
+    },
+    "lifestyle": {
+      "title": "Vantagens de Estilo de Vida",
+      "items": [
+        "Ambiente campestre tranquilo",
+        "10 minutos do centro de Lagos",
+        "Perto de praias e campos de golfe",
+        "Perfeito para trabalho remoto",
+        "Ideal para receber convidados",
+        "Jardins maduros de baixa manutenção",
+        "Privacidade e segurança",
+        "Aproveite o sol durante todo o ano",
+        "Forte potencial de arrendamento",
+        "Excelente oportunidade de investimento"
+      ]
+    }
+  },
+  "location": {
+    "title": "Localização Premium",
+    "name": "Colinas Verdes, Bensafrim, Lagos, Portugal",
+    "description": "Situada no procurado empreendimento Colinas Verdes no Algarve de Portugal, esta propriedade oferece o melhor de dois mundos—vida campestre serena com acesso imediato a comodidades urbanas.",
+    "additional_info": "Lagos é uma das cidades mais históricas e encantadoras da região do Algarve de Portugal, reconhecida pelas suas praias deslumbrantes, marina vibrante, excelentes restaurantes e rico património cultural. A área de Colinas Verdes proporciona um retiro tranquilo mantendo acesso conveniente a tudo o que esta bela parte de Portugal tem para oferecer.",
+    "latitude": 37.1333,
+    "longitude": -8.6667,
+    "highlights": [
+      {"label": "Centro de Lagos:", "value": "10 minutos"},
+      {"label": "Praias:", "value": "Curta distância até à costa pristina do Algarve"},
+      {"label": "Campos de Golfe:", "value": "Múltiplos campos de campeonato nas proximidades"},
+      {"label": "Aeroporto:", "value": "Aeroporto Internacional de Faro a fácil alcance"},
+      {"label": "Restaurantes & Compras:", "value": "Lagos oferece excelente gastronomia e comércio"}
+    ]
+  },
+  "contact": {
+    "title": "Fale Diretamente com o Proprietário",
+    "subtitle": "Obtenha informações autênticas e marque a sua visita privada diretamente",
+    "badge_text": "Contacto Direto com Proprietário",
+    "phone": "+351 917 566 931",
+    "reference": "CV39 - Villa Colinas Verdes",
+    "why_title": "Porquê Comprar Diretamente?",
+    "benefits": [
+      "Poupe em taxas de comissão de agente",
+      "Obtenha conhecimento de primeira mão sobre a propriedade",
+      "Horários de visita flexíveis",
+      "Negociação direta e decisões mais rápidas",
+      "Informações pessoais sobre a propriedade e área",
+      "Preço negociável - aberto a ofertas razoáveis",
+      "Opção de compra parcialmente mobilada"
+    ]
+  },
+  "navigation": {
+    "brand": "Colinas Verdes 39",
+    "menu": [
+      {"label": "Visão Geral", "link": "#overview"},
+      {"label": "Galeria", "link": "#gallery"},
+      {"label": "Características", "link": "#features"},
+      {"label": "Localização", "link": "#location"},
+      {"label": "Contacto", "link": "#contact"}
+    ]
+  }
+}

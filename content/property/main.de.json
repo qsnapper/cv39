@@ -1,0 +1,145 @@
+{
+  "title": "Exquisite Landvilla",
+  "subtitle": "Colinas Verdes, Lagos, Portugal",
+  "price": "€1.045.000",
+  "hero_image": "images/pool.jpg",
+  "quick_facts": {
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "built_area": "298m²",
+    "plot_size": "2.064m²",
+    "pool_size": "10x5m"
+  },
+  "overview": {
+    "title": "Ein Seltenes Landrefugium",
+    "lead": "Entdecken Sie diese außergewöhnliche T4-Villa in der prestigeträchtigen Colinas Verdes-Anlage in Portugals atemberaubender Algarve-Region, die die perfekte Mischung aus ländlicher Ruhe und städtischer Bequemlichkeit bietet, nur 10 Minuten vom historischen Zentrum von Lagos entfernt.",
+    "description1": "Dieses herausragende Anwesen erstreckt sich über mehr als 2.000 Quadratmeter reife Landschaftsgärten mit einem nach Süden ausgerichteten Swimmingpool, mehreren abgeschiedenen Terrassen und einem charmanten Fischteich, die durch gewundene Wege verbunden sind. Die Villa verkörpert raffiniertes portugiesisches Wohnen mit geräumigen Innenräumen, die durch Balkendecken, erstklassige Ausstattung und viel natürliches Licht gekennzeichnet sind.",
+    "description2": "Über seine architektonische Eleganz hinaus bietet dieses Haus außergewöhnliche Lifestyle-Annehmlichkeiten, darunter eine private Sauna, ein eigenes Fitnessstudio in einer Hütte und einen umgebauten Büroraum mit Zwischengeschoss—ideal für modernes Remote-Arbeiten. Energieeffiziente Solarpanels und eine B-Energieklasse unterstreichen das Engagement der Immobilie für nachhaltigen Luxus.",
+    "highlights": [
+      {"text": "Toplage - 10 Min. nach Lagos"},
+      {"text": "Privater Pool & Reife Gärten"},
+      {"text": "Sauna- & Fitnesseinrichtungen"},
+      {"text": "Solarpanels & Energieeffizient"},
+      {"text": "Homeoffice mit Zwischengeschoss"},
+      {"text": "Vollständig Eingezäunt & mit Tor"},
+      {"text": "Kann Teilmöbliert Verkauft Werden"}
+    ]
+  },
+  "owner_banner": {
+    "badge_text": "Direkt vom Eigentümer",
+    "benefits": [
+      {"text": "Keine Maklerprovision"},
+      {"text": "Direkte Kommunikation"},
+      {"text": "Schnellere Abwicklung"},
+      {"text": "Vollständige Objektkenntnis"}
+    ]
+  },
+  "features": {
+    "title": "Außergewöhnliche Merkmale & Ausstattung",
+    "interior": {
+      "title": "Innere Exzellenz",
+      "items": [
+        "Geräumiger Eingangsbereich mit Charakter",
+        "Großzügiges Wohnzimmer mit Balkendecken",
+        "STUV Designer-Kamin",
+        "Voll ausgestattete Küche mit Keller-Möbeln",
+        "Premium Smeg- und Siemens-Geräte",
+        "Separates Esszimmer",
+        "4 Schlafzimmer mit Einbauschränken",
+        "Master-Suite mit eigenem Bad",
+        "3 zusätzliche Badezimmer",
+        "Hochwertige Doppelverglasung",
+        "Elektrische Rollläden durchgehend",
+        "Massivholztüren",
+        "Zentralheizungssystem"
+      ]
+    },
+    "outdoor": {
+      "title": "Leben im Freien",
+      "items": [
+        "Nach Süden ausgerichteter Pool (10x5m)",
+        "Ummauerter Poolbereich für Privatsphäre",
+        "2.064m² reife Landschaftsgärten",
+        "Mehrere abgeschiedene Terrassen",
+        "Dekorativer Fischteich",
+        "Gewundene Gartenwege",
+        "Reife Bäume überall",
+        "Vollständig eingezäuntes Grundstück",
+        "Automatische elektrische Tore",
+        "Carport und Parkplätze"
+      ]
+    },
+    "amenities": {
+      "title": "Premium-Ausstattung",
+      "items": [
+        "Private Saunaanlage",
+        "Holzhütten-Fitnessstudio",
+        "Umgebauter Büroraum mit Zwischengeschoss",
+        "Externe Waschküche",
+        "Solarpanels für Warmwasser",
+        "Solarpanels für Stromerzeugung",
+        "Energieklasse: B",
+        "Wasseranschluss",
+        "Stromanschluss",
+        "Klärgrube"
+      ]
+    },
+    "lifestyle": {
+      "title": "Lifestyle-Vorteile",
+      "items": [
+        "Friedliche ländliche Umgebung",
+        "10 Minuten zum Stadtzentrum von Lagos",
+        "In der Nähe von Stränden und Golfplätzen",
+        "Perfekt für Remote-Arbeit",
+        "Ideal zum Empfang von Gästen",
+        "Pflegeleichte reife Gärten",
+        "Privatsphäre und Sicherheit",
+        "Ganzjähriger Sonnengenuss",
+        "Starkes Vermietungspotenzial",
+        "Hervorragende Investitionsmöglichkeit"
+      ]
+    }
+  },
+  "location": {
+    "title": "Toplage",
+    "name": "Colinas Verdes, Bensafrim, Lagos, Portugal",
+    "description": "Gelegen in der begehrten Colinas Verdes-Anlage in Portugals Algarve, bietet diese Immobilie das Beste aus beiden Welten—ruhiges Landleben mit direktem Zugang zu städtischen Annehmlichkeiten.",
+    "additional_info": "Lagos ist eine der historischsten und charmantesten Städte der Algarve-Region Portugals, bekannt für ihre atemberaubenden Strände, den lebendigen Yachthafen, ausgezeichnete Restaurants und das reiche kulturelle Erbe. Die Gegend Colinas Verdes bietet einen ruhigen Rückzugsort und gleichzeitig bequemen Zugang zu allem, was dieser schöne Teil Portugals zu bieten hat.",
+    "latitude": 37.1333,
+    "longitude": -8.6667,
+    "highlights": [
+      {"label": "Stadtzentrum Lagos:", "value": "10 Minuten"},
+      {"label": "Strände:", "value": "Kurze Fahrt zur unberührten Algarve-Küste"},
+      {"label": "Golfplätze:", "value": "Mehrere Championship-Plätze in der Nähe"},
+      {"label": "Flughafen:", "value": "Internationaler Flughafen Faro in einfacher Reichweite"},
+      {"label": "Restaurants & Shopping:", "value": "Lagos bietet ausgezeichnete Gastronomie und Einzelhandel"}
+    ]
+  },
+  "contact": {
+    "title": "Sprechen Sie Direkt mit dem Eigentümer",
+    "subtitle": "Erhalten Sie authentische Einblicke und vereinbaren Sie Ihre private Besichtigung direkt",
+    "badge_text": "Direkter Kontakt zum Eigentümer",
+    "phone": "+351 917 566 931",
+    "reference": "CV39 - Villa Colinas Verdes",
+    "why_title": "Warum Direkt Kaufen?",
+    "benefits": [
+      "Sparen Sie Maklerprovision",
+      "Erhalten Sie Wissen aus erster Hand über die Immobilie",
+      "Flexible Besichtigungstermine",
+      "Direkte Verhandlung & schnellere Entscheidungen",
+      "Persönliche Einblicke in Immobilie & Gegend",
+      "Verhandelbarer Preis - offen für vernünftige Angebote",
+      "Option für teilmöblierten Kauf"
+    ]
+  },
+  "navigation": {
+    "brand": "Colinas Verdes 39",
+    "menu": [
+      {"label": "Überblick", "link": "#overview"},
+      {"label": "Galerie", "link": "#gallery"},
+      {"label": "Merkmale", "link": "#features"},
+      {"label": "Lage", "link": "#location"},
+      {"label": "Kontakt", "link": "#contact"}
+    ]
+  }
+}

@@ -2,15 +2,49 @@
 
 A luxury single-page website to promote your beautiful 4-bedroom villa in Colinas Verdes, Lagos.
 
+## 🎉 NEW: Content Management System (CMS) + Multi-Language Support
+
+Your website now features:
+- ✅ **Easy Content Editing** - Update text, images, and features through a user-friendly admin panel
+- ✅ **Multi-Language Support** - English, Portuguese, French, and German
+- ✅ **No Coding Required** - Edit everything through `/admin/` panel
+- ✅ **Git-Based CMS** - All changes are version-controlled
+- ✅ **Free Forever** - Powered by Decap CMS (formerly Netlify CMS)
+
+**📖 [Read the Complete CMS Guide](CMS_GUIDE.md)** - Step-by-step instructions for editing your site
+
 ## Overview
 
-This is a static website built with HTML, CSS, and vanilla JavaScript. It features:
-- Luxury/elegant design with sophisticated color palette
-- Responsive layout (mobile, tablet, desktop)
-- Image gallery with lightbox functionality
-- Contact form with validation
-- Smooth scrolling navigation
-- SEO-friendly markup
+This is a dynamic website built with HTML, CSS, and vanilla JavaScript. It features:
+- 🌍 **Multi-language support** (EN, PT, FR, DE) with automatic detection
+- 📝 **Content Management System** for easy editing
+- 🎨 Luxury/elegant design with sophisticated color palette
+- 📱 Responsive layout (mobile, tablet, desktop)
+- 🖼️ Image gallery with lightbox functionality
+- 📧 Contact form with Netlify Forms integration
+- 🔄 Smooth scrolling navigation
+- 🔍 SEO-friendly markup
+
+## Quick Start
+
+### Using the CMS (Recommended for Content Updates)
+
+1. **Deploy to Netlify** (if not already done)
+2. **Enable Netlify Identity**: Go to Netlify Dashboard → Identity → Enable Identity
+3. **Enable Git Gateway**: Identity Settings → Git Gateway → Enable
+4. **Invite yourself**: Identity → Invite users → Enter your email
+5. **Access CMS**: Visit `https://your-site.netlify.app/admin/`
+
+📖 **[See Full CMS Setup Guide](CMS_GUIDE.md)**
+
+### Editing Content
+
+Once the CMS is set up, you can edit:
+- Text content in 4 languages
+- Property features and descriptions
+- Images and gallery
+- Contact information
+- All without touching code!
 
 ## Getting Started
 
@@ -361,12 +395,25 @@ This website works on:
 
 ```
 cv39/
-├── index.html          # Main HTML file
-├── styles.css          # All styling
-├── script.js           # All JavaScript functionality
-├── images/             # Property images folder
-│   └── .gitkeep        # Placeholder file
-└── README.md           # This file
+├── index.html              # Main HTML file
+├── styles.css              # All styling
+├── script.js               # Gallery and map functionality
+├── content-loader.js       # Multi-language content loader
+├── admin/                  # CMS admin panel
+│   ├── index.html         # CMS entry point
+│   └── config.yml         # CMS configuration
+├── content/                # Editable content (managed by CMS)
+│   ├── property/          # Property information
+│   │   ├── main.en.json   # English content
+│   │   ├── main.pt.json   # Portuguese content
+│   │   ├── main.fr.json   # French content
+│   │   └── main.de.json   # German content
+│   └── settings/          # Site settings
+│       └── general.json   # Global settings
+├── images/                 # Property images folder
+├── README.md              # This file
+├── CMS_GUIDE.md           # Complete CMS usage guide
+└── netlify.toml           # Netlify configuration
 ```
 
 ## Support & Questions
