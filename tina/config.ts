@@ -5,9 +5,13 @@ const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main"
 
 export default defineConfig({
   branch,
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "", // Get this from tina.io
-  token: process.env.TINA_TOKEN || "", // Get this from tina.io
 
+  // Use local mode for development (no cloud credentials needed)
+  // When deploying to production, set these environment variables
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+  token: process.env.TINA_TOKEN,
+
+  // Enable local development mode when no credentials provided
   build: {
     outputFolder: "admin",
     publicFolder: "public",
@@ -25,11 +29,6 @@ export default defineConfig({
         label: "Property Content",
         path: "content/property",
         format: "json",
-        ui: {
-          defaultItem: {
-            locale: "en",
-          },
-        },
         fields: [
           {
             type: "string",

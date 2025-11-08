@@ -2,7 +2,15 @@
 
 import { useState } from 'react'
 
-export default function Contact() {
+type ContactProps = {
+  data: {
+    phone: string
+    reference: string
+    benefits: string[]
+  }
+}
+
+export default function Contact({ data }: ContactProps) {
   const [formMessage, setFormMessage] = useState('')
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -50,24 +58,20 @@ export default function Contact() {
             <div className="contact-details">
               <div className="contact-item">
                 <strong>Phone:</strong>
-                <a href="tel:+351917566931">+351 917 566 931</a>
+                <a href={`tel:${data.phone.replace(/\s/g, '')}`}>{data.phone}</a>
               </div>
               <div className="contact-item">
                 <strong>Reference:</strong>
-                CV39 - Colinas Verdes Villa
+                {data.reference}
               </div>
             </div>
 
             <div className="contact-cta">
               <h4>Why Buy Direct?</h4>
               <ul>
-                <li>Save on agent commission fees</li>
-                <li>Get first-hand property knowledge</li>
-                <li>Flexible viewing schedules</li>
-                <li>Direct negotiation & faster decisions</li>
-                <li>Personal insights about the property & area</li>
-                <li>Negotiable price - open to reasonable offers</li>
-                <li>Option to purchase partially furnished</li>
+                {data.benefits.map((benefit, index) => (
+                  <li key={index}>{benefit}</li>
+                ))}
               </ul>
             </div>
           </div>
