@@ -9,190 +9,507 @@ publish_mode: editorial_workflow
 media_folder: "images"
 public_folder: "images"
 
-# i18n configuration for multi-language support
-i18n:
-  structure: multiple_files
-  locales: [en, pt, fr, de]
-  default_locale: en
-
 # Collections define the content structure
 collections:
-  # Property information
+  # Property information - each language as separate entry
   - name: "property"
     label: "Property Information"
     files:
-      - label: "Villa Details"
-        name: "main"
-        file: "content/property/main"
-        i18n: true
+      # English Version
+      - label: "🇬🇧 Villa Details (English)"
+        name: "main_en"
+        file: "content/property/main.en.json"
         fields:
-          # Hero Section
-          - {label: "Property Title", name: "title", widget: "string", i18n: true}
-          - {label: "Property Subtitle", name: "subtitle", widget: "string", i18n: true}
-          - {label: "Price", name: "price", widget: "string", i18n: true}
-          - {label: "Hero Image", name: "hero_image", widget: "image", i18n: duplicate}
-
-          # Quick Facts
+          - {label: "Property Title", name: "title", widget: "string"}
+          - {label: "Property Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Price", name: "price", widget: "string"}
+          - {label: "Hero Image", name: "hero_image", widget: "image"}
           - label: "Quick Facts"
             name: "quick_facts"
             widget: "object"
-            i18n: true
             fields:
-              - {label: "Bedrooms", name: "bedrooms", widget: "number", i18n: duplicate}
-              - {label: "Bathrooms", name: "bathrooms", widget: "number", i18n: duplicate}
-              - {label: "Built Area", name: "built_area", widget: "string", i18n: duplicate}
-              - {label: "Plot Size", name: "plot_size", widget: "string", i18n: duplicate}
-              - {label: "Pool Size", name: "pool_size", widget: "string", i18n: duplicate}
-
-          # Overview Section
+              - {label: "Bedrooms", name: "bedrooms", widget: "number"}
+              - {label: "Bathrooms", name: "bathrooms", widget: "number"}
+              - {label: "Built Area", name: "built_area", widget: "string"}
+              - {label: "Plot Size", name: "plot_size", widget: "string"}
+              - {label: "Pool Size", name: "pool_size", widget: "string"}
           - label: "Overview"
             name: "overview"
             widget: "object"
-            i18n: true
             fields:
-              - {label: "Section Title", name: "title", widget: "string", i18n: true}
-              - {label: "Lead Paragraph", name: "lead", widget: "text", i18n: true}
-              - {label: "Description Paragraph 1", name: "description1", widget: "text", i18n: true}
-              - {label: "Description Paragraph 2", name: "description2", widget: "text", i18n: true}
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "Lead Paragraph", name: "lead", widget: "text"}
+              - {label: "Description Paragraph 1", name: "description1", widget: "text"}
+              - {label: "Description Paragraph 2", name: "description2", widget: "text"}
               - label: "Highlights"
                 name: "highlights"
                 widget: "list"
-                i18n: true
                 fields:
-                  - {label: "Highlight Text", name: "text", widget: "string", i18n: true}
-
-          # Owner Sale Banner
+                  - {label: "Highlight Text", name: "text", widget: "string"}
           - label: "Owner Sale Banner"
             name: "owner_banner"
             widget: "object"
-            i18n: true
             fields:
-              - {label: "Badge Text", name: "badge_text", widget: "string", i18n: true}
+              - {label: "Badge Text", name: "badge_text", widget: "string"}
               - label: "Benefits"
                 name: "benefits"
                 widget: "list"
-                i18n: true
                 fields:
-                  - {label: "Benefit Text", name: "text", widget: "string", i18n: true}
-
-          # Features Section
+                  - {label: "Benefit Text", name: "text", widget: "string"}
           - label: "Features"
             name: "features"
             widget: "object"
-            i18n: true
             fields:
-              - {label: "Section Title", name: "title", widget: "string", i18n: true}
+              - {label: "Section Title", name: "title", widget: "string"}
               - label: "Interior Features"
                 name: "interior"
                 widget: "object"
-                i18n: true
                 fields:
-                  - {label: "Category Title", name: "title", widget: "string", i18n: true}
+                  - {label: "Category Title", name: "title", widget: "string"}
                   - label: "Items"
                     name: "items"
                     widget: "list"
-                    i18n: true
-                    field: {label: "Feature", name: "feature", widget: "string", i18n: true}
+                    field: {label: "Feature", name: "feature", widget: "string"}
               - label: "Outdoor Features"
                 name: "outdoor"
                 widget: "object"
-                i18n: true
                 fields:
-                  - {label: "Category Title", name: "title", widget: "string", i18n: true}
+                  - {label: "Category Title", name: "title", widget: "string"}
                   - label: "Items"
                     name: "items"
                     widget: "list"
-                    i18n: true
-                    field: {label: "Feature", name: "feature", widget: "string", i18n: true}
+                    field: {label: "Feature", name: "feature", widget: "string"}
               - label: "Amenities"
                 name: "amenities"
                 widget: "object"
-                i18n: true
                 fields:
-                  - {label: "Category Title", name: "title", widget: "string", i18n: true}
+                  - {label: "Category Title", name: "title", widget: "string"}
                   - label: "Items"
                     name: "items"
                     widget: "list"
-                    i18n: true
-                    field: {label: "Feature", name: "feature", widget: "string", i18n: true}
+                    field: {label: "Feature", name: "feature", widget: "string"}
               - label: "Lifestyle Benefits"
                 name: "lifestyle"
                 widget: "object"
-                i18n: true
                 fields:
-                  - {label: "Category Title", name: "title", widget: "string", i18n: true}
+                  - {label: "Category Title", name: "title", widget: "string"}
                   - label: "Items"
                     name: "items"
                     widget: "list"
-                    i18n: true
-                    field: {label: "Feature", name: "feature", widget: "string", i18n: true}
-
-          # Location Section
+                    field: {label: "Feature", name: "feature", widget: "string"}
           - label: "Location"
             name: "location"
             widget: "object"
-            i18n: true
             fields:
-              - {label: "Section Title", name: "title", widget: "string", i18n: true}
-              - {label: "Location Name", name: "name", widget: "string", i18n: true}
-              - {label: "Description", name: "description", widget: "text", i18n: true}
-              - {label: "Additional Info", name: "additional_info", widget: "text", i18n: true}
-              - {label: "Latitude", name: "latitude", widget: "number", value_type: "float", i18n: duplicate}
-              - {label: "Longitude", name: "longitude", widget: "number", value_type: "float", i18n: duplicate}
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "Location Name", name: "name", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Additional Info", name: "additional_info", widget: "text"}
+              - {label: "Latitude", name: "latitude", widget: "number", value_type: "float"}
+              - {label: "Longitude", name: "longitude", widget: "number", value_type: "float"}
               - label: "Highlights"
                 name: "highlights"
                 widget: "list"
-                i18n: true
                 fields:
-                  - {label: "Label", name: "label", widget: "string", i18n: true}
-                  - {label: "Value", name: "value", widget: "string", i18n: true}
-
-          # Contact Section
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Value", name: "value", widget: "string"}
           - label: "Contact"
             name: "contact"
             widget: "object"
-            i18n: true
             fields:
-              - {label: "Section Title", name: "title", widget: "string", i18n: true}
-              - {label: "Section Subtitle", name: "subtitle", widget: "string", i18n: true}
-              - {label: "Badge Text", name: "badge_text", widget: "string", i18n: true}
-              - {label: "Phone Number", name: "phone", widget: "string", i18n: duplicate}
-              - {label: "Property Reference", name: "reference", widget: "string", i18n: duplicate}
-              - {label: "Why Buy Direct Title", name: "why_title", widget: "string", i18n: true}
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "Section Subtitle", name: "subtitle", widget: "string"}
+              - {label: "Badge Text", name: "badge_text", widget: "string"}
+              - {label: "Phone Number", name: "phone", widget: "string"}
+              - {label: "Property Reference", name: "reference", widget: "string"}
+              - {label: "Why Buy Direct Title", name: "why_title", widget: "string"}
               - label: "Benefits"
                 name: "benefits"
                 widget: "list"
-                i18n: true
-                field: {label: "Benefit", name: "benefit", widget: "string", i18n: true}
-
-          # Navigation
+                field: {label: "Benefit", name: "benefit", widget: "string"}
           - label: "Navigation"
             name: "navigation"
             widget: "object"
-            i18n: true
             fields:
-              - {label: "Brand Name", name: "brand", widget: "string", i18n: true}
+              - {label: "Brand Name", name: "brand", widget: "string"}
               - label: "Menu Items"
                 name: "menu"
                 widget: "list"
-                i18n: true
                 fields:
-                  - {label: "Label", name: "label", widget: "string", i18n: true}
-                  - {label: "Link", name: "link", widget: "string", i18n: duplicate}
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Link", name: "link", widget: "string"}
 
-  # Gallery images configuration
-  - name: "gallery"
-    label: "Gallery"
-    folder: "content/gallery"
-    create: true
-    delete: true
-    i18n: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Image", name: "image", widget: "image", i18n: duplicate}
-      - {label: "Alt Text", name: "alt", widget: "string", i18n: true}
-      - {label: "Category", name: "category", widget: "select", options: ["exterior", "interior", "pool", "gardens"], i18n: duplicate}
-      - {label: "Order", name: "order", widget: "number", value_type: "int", i18n: duplicate}
+      # Portuguese Version
+      - label: "🇵🇹 Villa Details (Português)"
+        name: "main_pt"
+        file: "content/property/main.pt.json"
+        fields:
+          - {label: "Property Title", name: "title", widget: "string"}
+          - {label: "Property Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Price", name: "price", widget: "string"}
+          - {label: "Hero Image", name: "hero_image", widget: "image"}
+          - label: "Quick Facts"
+            name: "quick_facts"
+            widget: "object"
+            fields:
+              - {label: "Bedrooms", name: "bedrooms", widget: "number"}
+              - {label: "Bathrooms", name: "bathrooms", widget: "number"}
+              - {label: "Built Area", name: "built_area", widget: "string"}
+              - {label: "Plot Size", name: "plot_size", widget: "string"}
+              - {label: "Pool Size", name: "pool_size", widget: "string"}
+          - label: "Overview"
+            name: "overview"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "Lead Paragraph", name: "lead", widget: "text"}
+              - {label: "Description Paragraph 1", name: "description1", widget: "text"}
+              - {label: "Description Paragraph 2", name: "description2", widget: "text"}
+              - label: "Highlights"
+                name: "highlights"
+                widget: "list"
+                fields:
+                  - {label: "Highlight Text", name: "text", widget: "string"}
+          - label: "Owner Sale Banner"
+            name: "owner_banner"
+            widget: "object"
+            fields:
+              - {label: "Badge Text", name: "badge_text", widget: "string"}
+              - label: "Benefits"
+                name: "benefits"
+                widget: "list"
+                fields:
+                  - {label: "Benefit Text", name: "text", widget: "string"}
+          - label: "Features"
+            name: "features"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string"}
+              - label: "Interior Features"
+                name: "interior"
+                widget: "object"
+                fields:
+                  - {label: "Category Title", name: "title", widget: "string"}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    field: {label: "Feature", name: "feature", widget: "string"}
+              - label: "Outdoor Features"
+                name: "outdoor"
+                widget: "object"
+                fields:
+                  - {label: "Category Title", name: "title", widget: "string"}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    field: {label: "Feature", name: "feature", widget: "string"}
+              - label: "Amenities"
+                name: "amenities"
+                widget: "object"
+                fields:
+                  - {label: "Category Title", name: "title", widget: "string"}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    field: {label: "Feature", name: "feature", widget: "string"}
+              - label: "Lifestyle Benefits"
+                name: "lifestyle"
+                widget: "object"
+                fields:
+                  - {label: "Category Title", name: "title", widget: "string"}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    field: {label: "Feature", name: "feature", widget: "string"}
+          - label: "Location"
+            name: "location"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "Location Name", name: "name", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Additional Info", name: "additional_info", widget: "text"}
+              - {label: "Latitude", name: "latitude", widget: "number", value_type: "float"}
+              - {label: "Longitude", name: "longitude", widget: "number", value_type: "float"}
+              - label: "Highlights"
+                name: "highlights"
+                widget: "list"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Value", name: "value", widget: "string"}
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "Section Subtitle", name: "subtitle", widget: "string"}
+              - {label: "Badge Text", name: "badge_text", widget: "string"}
+              - {label: "Phone Number", name: "phone", widget: "string"}
+              - {label: "Property Reference", name: "reference", widget: "string"}
+              - {label: "Why Buy Direct Title", name: "why_title", widget: "string"}
+              - label: "Benefits"
+                name: "benefits"
+                widget: "list"
+                field: {label: "Benefit", name: "benefit", widget: "string"}
+          - label: "Navigation"
+            name: "navigation"
+            widget: "object"
+            fields:
+              - {label: "Brand Name", name: "brand", widget: "string"}
+              - label: "Menu Items"
+                name: "menu"
+                widget: "list"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Link", name: "link", widget: "string"}
+
+      # French Version
+      - label: "🇫🇷 Villa Details (Français)"
+        name: "main_fr"
+        file: "content/property/main.fr.json"
+        fields:
+          - {label: "Property Title", name: "title", widget: "string"}
+          - {label: "Property Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Price", name: "price", widget: "string"}
+          - {label: "Hero Image", name: "hero_image", widget: "image"}
+          - label: "Quick Facts"
+            name: "quick_facts"
+            widget: "object"
+            fields:
+              - {label: "Bedrooms", name: "bedrooms", widget: "number"}
+              - {label: "Bathrooms", name: "bathrooms", widget: "number"}
+              - {label: "Built Area", name: "built_area", widget: "string"}
+              - {label: "Plot Size", name: "plot_size", widget: "string"}
+              - {label: "Pool Size", name: "pool_size", widget: "string"}
+          - label: "Overview"
+            name: "overview"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "Lead Paragraph", name: "lead", widget: "text"}
+              - {label: "Description Paragraph 1", name: "description1", widget: "text"}
+              - {label: "Description Paragraph 2", name: "description2", widget: "text"}
+              - label: "Highlights"
+                name: "highlights"
+                widget: "list"
+                fields:
+                  - {label: "Highlight Text", name: "text", widget: "string"}
+          - label: "Owner Sale Banner"
+            name: "owner_banner"
+            widget: "object"
+            fields:
+              - {label: "Badge Text", name: "badge_text", widget: "string"}
+              - label: "Benefits"
+                name: "benefits"
+                widget: "list"
+                fields:
+                  - {label: "Benefit Text", name: "text", widget: "string"}
+          - label: "Features"
+            name: "features"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string"}
+              - label: "Interior Features"
+                name: "interior"
+                widget: "object"
+                fields:
+                  - {label: "Category Title", name: "title", widget: "string"}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    field: {label: "Feature", name: "feature", widget: "string"}
+              - label: "Outdoor Features"
+                name: "outdoor"
+                widget: "object"
+                fields:
+                  - {label: "Category Title", name: "title", widget: "string"}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    field: {label: "Feature", name: "feature", widget: "string"}
+              - label: "Amenities"
+                name: "amenities"
+                widget: "object"
+                fields:
+                  - {label: "Category Title", name: "title", widget: "string"}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    field: {label: "Feature", name: "feature", widget: "string"}
+              - label: "Lifestyle Benefits"
+                name: "lifestyle"
+                widget: "object"
+                fields:
+                  - {label: "Category Title", name: "title", widget: "string"}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    field: {label: "Feature", name: "feature", widget: "string"}
+          - label: "Location"
+            name: "location"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "Location Name", name: "name", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Additional Info", name: "additional_info", widget: "text"}
+              - {label: "Latitude", name: "latitude", widget: "number", value_type: "float"}
+              - {label: "Longitude", name: "longitude", widget: "number", value_type: "float"}
+              - label: "Highlights"
+                name: "highlights"
+                widget: "list"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Value", name: "value", widget: "string"}
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "Section Subtitle", name: "subtitle", widget: "string"}
+              - {label: "Badge Text", name: "badge_text", widget: "string"}
+              - {label: "Phone Number", name: "phone", widget: "string"}
+              - {label: "Property Reference", name: "reference", widget: "string"}
+              - {label: "Why Buy Direct Title", name: "why_title", widget: "string"}
+              - label: "Benefits"
+                name: "benefits"
+                widget: "list"
+                field: {label: "Benefit", name: "benefit", widget: "string"}
+          - label: "Navigation"
+            name: "navigation"
+            widget: "object"
+            fields:
+              - {label: "Brand Name", name: "brand", widget: "string"}
+              - label: "Menu Items"
+                name: "menu"
+                widget: "list"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Link", name: "link", widget: "string"}
+
+      # German Version
+      - label: "🇩🇪 Villa Details (Deutsch)"
+        name: "main_de"
+        file: "content/property/main.de.json"
+        fields:
+          - {label: "Property Title", name: "title", widget: "string"}
+          - {label: "Property Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Price", name: "price", widget: "string"}
+          - {label: "Hero Image", name: "hero_image", widget: "image"}
+          - label: "Quick Facts"
+            name: "quick_facts"
+            widget: "object"
+            fields:
+              - {label: "Bedrooms", name: "bedrooms", widget: "number"}
+              - {label: "Bathrooms", name: "bathrooms", widget: "number"}
+              - {label: "Built Area", name: "built_area", widget: "string"}
+              - {label: "Plot Size", name: "plot_size", widget: "string"}
+              - {label: "Pool Size", name: "pool_size", widget: "string"}
+          - label: "Overview"
+            name: "overview"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "Lead Paragraph", name: "lead", widget: "text"}
+              - {label: "Description Paragraph 1", name: "description1", widget: "text"}
+              - {label: "Description Paragraph 2", name: "description2", widget: "text"}
+              - label: "Highlights"
+                name: "highlights"
+                widget: "list"
+                fields:
+                  - {label: "Highlight Text", name: "text", widget: "string"}
+          - label: "Owner Sale Banner"
+            name: "owner_banner"
+            widget: "object"
+            fields:
+              - {label: "Badge Text", name: "badge_text", widget: "string"}
+              - label: "Benefits"
+                name: "benefits"
+                widget: "list"
+                fields:
+                  - {label: "Benefit Text", name: "text", widget: "string"}
+          - label: "Features"
+            name: "features"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string"}
+              - label: "Interior Features"
+                name: "interior"
+                widget: "object"
+                fields:
+                  - {label: "Category Title", name: "title", widget: "string"}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    field: {label: "Feature", name: "feature", widget: "string"}
+              - label: "Outdoor Features"
+                name: "outdoor"
+                widget: "object"
+                fields:
+                  - {label: "Category Title", name: "title", widget: "string"}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    field: {label: "Feature", name: "feature", widget: "string"}
+              - label: "Amenities"
+                name: "amenities"
+                widget: "object"
+                fields:
+                  - {label: "Category Title", name: "title", widget: "string"}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    field: {label: "Feature", name: "feature", widget: "string"}
+              - label: "Lifestyle Benefits"
+                name: "lifestyle"
+                widget: "object"
+                fields:
+                  - {label: "Category Title", name: "title", widget: "string"}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    field: {label: "Feature", name: "feature", widget: "string"}
+          - label: "Location"
+            name: "location"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "Location Name", name: "name", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Additional Info", name: "additional_info", widget: "text"}
+              - {label: "Latitude", name: "latitude", widget: "number", value_type: "float"}
+              - {label: "Longitude", name: "longitude", widget: "number", value_type: "float"}
+              - label: "Highlights"
+                name: "highlights"
+                widget: "list"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Value", name: "value", widget: "string"}
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "Section Subtitle", name: "subtitle", widget: "string"}
+              - {label: "Badge Text", name: "badge_text", widget: "string"}
+              - {label: "Phone Number", name: "phone", widget: "string"}
+              - {label: "Property Reference", name: "reference", widget: "string"}
+              - {label: "Why Buy Direct Title", name: "why_title", widget: "string"}
+              - label: "Benefits"
+                name: "benefits"
+                widget: "list"
+                field: {label: "Benefit", name: "benefit", widget: "string"}
+          - label: "Navigation"
+            name: "navigation"
+            widget: "object"
+            fields:
+              - {label: "Brand Name", name: "brand", widget: "string"}
+              - label: "Menu Items"
+                name: "menu"
+                widget: "list"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Link", name: "link", widget: "string"}
 
   # Site settings
   - name: "settings"
