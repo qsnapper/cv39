@@ -64,3 +64,16 @@ pids
 # Image optimization
 images/originals/
 optimize-images.sh
+
+# Next.js
+node_modules/
+.next/
+out/
+build/
+*.tsbuildinfo
+next-env.d.ts
+
+# Package manager
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
