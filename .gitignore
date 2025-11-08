@@ -81,3 +81,7 @@ pnpm-lock.yaml
 # TinaCMS
 .tina/__generated__/
 tina/__generated__/
+
+# Environment variables
+.env.local
+.env
