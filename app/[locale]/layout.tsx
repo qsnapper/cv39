@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import './globals.css'
+import '../globals.css'
+import type { Locale } from '../i18n-config'
 
 export const metadata: Metadata = {
   title: 'Luxury Villa for Sale - Colinas Verdes, Lagos, Portugal | €1,045,000',
@@ -9,11 +10,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: { locale }
 }: {
   children: React.ReactNode
+  params: { locale: Locale }
 }) {
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <link
           rel="stylesheet"

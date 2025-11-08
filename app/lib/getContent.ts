@@ -62,6 +62,15 @@ export type PropertyContent = {
 
 export async function getPropertyContent(locale: string = 'en'): Promise<PropertyContent> {
   const filePath = path.join(process.cwd(), 'content', 'property', `${locale}.json`)
-  const fileContents = fs.readFileSync(filePath, 'utf8')
-  return JSON.parse(fileContents)
+
+  // Try to load locale-specific file, fallback to English if not found
+  try {
+    const fileContents = fs.readFileSync(filePath, 'utf8')
+    return JSON.parse(fileContents)
+  } catch (error) {
+    // Fallback to English if locale file doesn't exist
+    const fallbackPath = path.join(process.cwd(), 'content', 'property', 'en.json')
+    const fileContents = fs.readFileSync(fallbackPath, 'utf8')
+    return JSON.parse(fileContents)
+  }
 }

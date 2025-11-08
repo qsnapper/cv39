@@ -1,0 +1,159 @@
+{
+  "locale": "pt",
+  "hero": {
+    "title": "Vila de Campo Requintada",
+    "subtitle": "Colinas Verdes, Lagos, Portugal",
+    "price": "€1.045.000",
+    "backgroundImage": "/images/pool.jpg"
+  },
+  "quickFacts": {
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "builtArea": "298m²",
+    "plotSize": "2.064m²",
+    "poolSize": "10x5m"
+  },
+  "overview": {
+    "heading": "Um Santuário Rural Raro",
+    "leadParagraph": "Descubra esta excecional moradia T4 situada no prestigiado empreendimento Colinas Verdes na deslumbrante região do Algarve em Portugal, oferecendo a combinação perfeita de tranquilidade campestre e comodidade urbana, a apenas 10 minutos do centro histórico de Lagos.",
+    "description": "Esta propriedade distinta estende-se por mais de 2.000 metros quadrados de jardins paisagísticos maduros, com uma piscina virada a sul, múltiplos terraços isolados e um charmoso lago de peixes conectado por caminhos sinuosos. A moradia exemplifica a vida portuguesa refinada com os seus interiores espaçosos, caracterizados por tetos com vigas, acabamentos premium e uma abundância de luz natural.\n\nPara além da sua elegância arquitectónica, esta casa oferece comodidades de estilo de vida excepcionais, incluindo uma sauna privada, ginásio em cabana dedicada e um espaço de escritório convertido com mezanino—ideal para trabalho remoto moderno. Painéis solares energeticamente eficientes e uma classificação energética B sublinham o compromisso da propriedade com o luxo sustentável.",
+    "highlights": [
+      "Localização Premium - 10 min de Lagos",
+      "Piscina Privada e Jardins Maduros",
+      "Sauna e Ginásio",
+      "Painéis Solares e Eficiente Energeticamente",
+      "Escritório com Mezanino",
+      "Totalmente Vedada e com Portão",
+      "Pode ser Vendida Parcialmente Mobilada"
+    ]
+  },
+  "gallery": [
+    { "src": "/images/front-entrance.jpg", "alt": "Entrada Principal", "category": "exterior" },
+    { "src": "/images/pool.jpg", "alt": "Piscina", "category": "pool" },
+    { "src": "/images/pool2.jpg", "alt": "Área da Piscina", "category": "pool" },
+    { "src": "/images/garden.jpg", "alt": "Jardins Paisagísticos", "category": "gardens" },
+    { "src": "/images/hero-garden.jpg", "alt": "Vista Geral do Jardim", "category": "gardens" },
+    { "src": "/images/entrance-driveway.jpg", "alt": "Entrada e Estrada", "category": "exterior" },
+    { "src": "/images/living.jpg", "alt": "Sala de Estar", "category": "interior" },
+    { "src": "/images/living2.jpg", "alt": "Vista da Sala de Estar", "category": "interior" },
+    { "src": "/images/living3.jpg", "alt": "Área de Estar com Lareira", "category": "interior" },
+    { "src": "/images/dining.jpg", "alt": "Sala de Jantar", "category": "interior" },
+    { "src": "/images/dining2.jpg", "alt": "Área de Jantar", "category": "interior" },
+    { "src": "/images/dining3.jpg", "alt": "Espaço de Jantar", "category": "interior" },
+    { "src": "/images/kitchen.jpg", "alt": "Cozinha Totalmente Equipada", "category": "interior" },
+    { "src": "/images/hallway.jpg", "alt": "Hall de Entrada", "category": "interior" },
+    { "src": "/images/hallway2.jpg", "alt": "Corredor Interior", "category": "interior" },
+    { "src": "/images/master-bedroom.jpg", "alt": "Quarto Principal", "category": "interior" },
+    { "src": "/images/master-bedroom2.jpg", "alt": "Suite Principal", "category": "interior" },
+    { "src": "/images/bedroom2.jpg", "alt": "Quarto 2", "category": "interior" },
+    { "src": "/images/bedroom3.jpg", "alt": "Quarto 3", "category": "interior" },
+    { "src": "/images/bathroom.jpg", "alt": "Casa de Banho", "category": "interior" },
+    { "src": "/images/bathroom2.jpg", "alt": "Casa de Banho Suite", "category": "interior" },
+    { "src": "/images/office.jpg", "alt": "Espaço de Escritório", "category": "interior" },
+    { "src": "/images/gym.jpg", "alt": "Ginásio", "category": "exterior" },
+    { "src": "/images/outdoor.jpg", "alt": "Terraço Exterior", "category": "exterior" },
+    { "src": "/images/seating-area.jpg", "alt": "Área de Estar Exterior", "category": "exterior" },
+    { "src": "/images/garden2.jpg", "alt": "Caminhos do Jardim", "category": "gardens" },
+    { "src": "/images/garden3.jpg", "alt": "Características do Jardim", "category": "gardens" },
+    { "src": "/images/garden5.jpg", "alt": "Paisagismo Maduro", "category": "gardens" },
+    { "src": "/images/garden6.jpg", "alt": "Terraço do Jardim", "category": "gardens" },
+    { "src": "/images/garden7.jpg", "alt": "Vistas do Jardim", "category": "gardens" },
+    { "src": "/images/garden8.jpg", "alt": "Terrenos do Jardim", "category": "gardens" },
+    { "src": "/images/garden9.jpg", "alt": "Área do Jardim", "category": "gardens" },
+    { "src": "/images/wood.jpg", "alt": "Características da Propriedade", "category": "exterior" },
+    { "src": "/images/satellite-view.jpg", "alt": "Vista de Satélite da Propriedade", "category": "exterior" },
+    { "src": "/images/floorplan.jpg", "alt": "Planta da Propriedade", "category": "exterior" }
+  ],
+  "features": {
+    "interior": {
+      "heading": "Excelência Interior",
+      "items": [
+        "Hall de entrada espaçoso com carácter",
+        "Sala de estar expansiva com tetos com vigas",
+        "Lareira design STUV",
+        "Cozinha totalmente equipada com mobiliário Keller",
+        "Eletrodomésticos premium Smeg e Siemens",
+        "Sala de jantar separada",
+        "4 quartos com roupeiros embutidos",
+        "Suite principal com casa de banho privativa",
+        "3 casas de banho adicionais",
+        "Janelas de vidro duplo de alta qualidade",
+        "Persianas elétricas em toda a casa",
+        "Portas de madeira maciça",
+        "Sistema de aquecimento central"
+      ]
+    },
+    "outdoor": {
+      "heading": "Vida ao Ar Livre",
+      "items": [
+        "Piscina virada a sul (10x5m)",
+        "Área da piscina murada para privacidade",
+        "2.064m² de jardins paisagísticos maduros",
+        "Múltiplos terraços isolados",
+        "Lago decorativo de peixes",
+        "Caminhos sinuosos do jardim",
+        "Árvores maduras por toda a parte",
+        "Propriedade totalmente vedada",
+        "Portões elétricos automáticos",
+        "Garagem e áreas de estacionamento"
+      ]
+    },
+    "amenities": {
+      "heading": "Comodidades Premium",
+      "items": [
+        "Sauna privada",
+        "Ginásio em cabana de madeira",
+        "Espaço de escritório convertido com mezanino",
+        "Lavandaria externa",
+        "Painéis solares para água quente",
+        "Painéis solares para geração de electricidade",
+        "Classificação energética: B",
+        "Ligação de água da rede",
+        "Electricidade da rede",
+        "Drenagem de fossa séptica"
+      ]
+    },
+    "lifestyle": {
+      "heading": "Vantagens de Estilo de Vida",
+      "items": [
+        "Ambiente campestre tranquilo",
+        "10 minutos do centro de Lagos",
+        "Perto de praias e campos de golfe",
+        "Perfeito para trabalho remoto",
+        "Ideal para receber convidados",
+        "Jardins maduros de baixa manutenção",
+        "Privacidade e segurança",
+        "Desfrute de sol durante todo o ano",
+        "Forte potencial de arrendamento",
+        "Excelente oportunidade de investimento"
+      ]
+    }
+  },
+  "location": {
+    "heading": "Localização Premium",
+    "address": "Colinas Verdes, Bensafrim, Lagos, Portugal",
+    "description": "Situado no procurado empreendimento Colinas Verdes no Algarve de Portugal, esta propriedade oferece o melhor de dois mundos—vida campestre serena com acesso imediato a comodidades urbanas.\n\nLagos é uma das cidades mais históricas e encantadoras da região do Algarve de Portugal, conhecida pelas suas praias deslumbrantes, marina vibrante, excelentes restaurantes e rica herança cultural. A área de Colinas Verdes oferece um retiro tranquilo, mantendo acesso conveniente a tudo o que esta bela parte de Portugal tem para oferecer.",
+    "latitude": 37.1385,
+    "longitude": -8.6958,
+    "highlights": [
+      "Centro de Lagos: 10 minutos",
+      "Praias: Curta distância até a costa pristina do Algarve de Portugal",
+      "Campos de Golfe: Múltiplos campos de campeonato próximos em Portugal",
+      "Aeroporto: Aeroporto Internacional de Faro, Portugal de fácil acesso",
+      "Restaurantes e Compras: Lagos oferece excelente gastronomia e comércio"
+    ]
+  },
+  "contact": {
+    "phone": "+351 917 566 931",
+    "reference": "CV39 - Moradia Colinas Verdes",
+    "benefits": [
+      "Poupe em comissões de agente",
+      "Obtenha conhecimento de primeira mão da propriedade",
+      "Horários de visita flexíveis",
+      "Negociação direta e decisões mais rápidas",
+      "Informações pessoais sobre a propriedade e área",
+      "Preço negociável - aberto a ofertas razoáveis",
+      "Opção de compra parcialmente mobilada"
+    ]
+  }
+}

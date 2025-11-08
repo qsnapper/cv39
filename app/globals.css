@@ -122,6 +122,32 @@ a:hover {
     color: var(--dark-navy);
 }
 
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.language-switcher a {
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.language-switcher a.active {
+    background-color: var(--primary-gold);
+    color: var(--dark-navy);
+}
+
+.language-switcher a:hover {
+    background-color: rgba(201, 169, 97, 0.2);
+}
+
 /* ==========================================
    Hero Section
    ========================================== */
