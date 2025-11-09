@@ -538,10 +538,12 @@ function buildLanguageVersions() {
   console.log('✓ Created language selection page at root index.html');
 
   console.log('\n✅ Build complete! All language versions generated.');
-  console.log('\nNext steps:');
-  console.log('1. Translate the content in translations/*.json files');
-  console.log('2. Run this script again to regenerate the HTML files');
-  console.log('3. Test locally, then deploy to Netlify');
+  console.log('\n📊 Verification:');
+  console.log(`  Root index.html size: ${fs.statSync(rootIndexPath).size} bytes`);
+  languages.forEach(lang => {
+    const langFile = path.join(__dirname, lang, 'index.html');
+    console.log(`  ${lang}/index.html size: ${fs.statSync(langFile).size} bytes`);
+  });
 }
 
 // Run the build
