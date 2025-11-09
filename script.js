@@ -86,10 +86,19 @@ class ContactForm {
     constructor() {
         this.form = document.getElementById('contactForm');
         this.messageDiv = this.form.querySelector('.form-message');
+        this.formStarted = false;
+        this.submissionId = null;
+        this.formInteractionTracked = false;
         this.init();
     }
 
     init() {
+        // Generate unique submission ID for this session
+        this.submissionId = this.generateSubmissionId();
+
+        // Track form interaction (user started filling out form)
+        this.trackFormInteraction();
+
         this.form.addEventListener('submit', (e) => {
             // Only validate - let Netlify handle the actual submission
             if (!this.validateForm()) {
@@ -99,7 +108,9 @@ class ContactForm {
                 if (window.umami) {
                     window.umami.track('form-submission', {
                         form: 'contact',
-                        language: document.documentElement.lang || 'unknown'
+                        submissionId: this.submissionId,
+                        language: document.documentElement.lang || 'unknown',
+                        timestamp: Date.now()
                     });
                 }
 
@@ -108,6 +119,39 @@ class ContactForm {
                 submitBtn.textContent = 'Sending...';
                 submitBtn.disabled = true;
             }
+        });
+    }
+
+    generateSubmissionId() {
+        // Generate a unique ID for this form session
+        // Format: timestamp-random
+        return `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+    }
+
+    trackFormInteraction() {
+        // Track when user starts interacting with the form
+        const formInputs = this.form.querySelectorAll('input, textarea');
+
+        formInputs.forEach(input => {
+            // Skip hidden inputs
+            if (input.type === 'hidden') return;
+
+            const trackInteraction = () => {
+                if (!this.formInteractionTracked) {
+                    this.formInteractionTracked = true;
+                    if (window.umami) {
+                        window.umami.track('form-interaction-start', {
+                            form: 'contact',
+                            submissionId: this.submissionId,
+                            language: document.documentElement.lang || 'unknown'
+                        });
+                    }
+                }
+            };
+
+            // Track on first focus or input
+            input.addEventListener('focus', trackInteraction, { once: true });
+            input.addEventListener('input', trackInteraction, { once: true });
         });
     }
 

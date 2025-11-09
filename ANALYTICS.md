@@ -21,7 +21,7 @@
 
 ## Overview
 
-The Colinas Verdes 39 website tracks **14 custom events** across 6 categories to measure user engagement, conversion paths, and property listing effectiveness.
+The Colinas Verdes 39 website tracks **15 custom events** across 7 categories to measure user engagement, conversion paths, and property listing effectiveness.
 
 ### Analytics Goals
 - Track lead generation (form submissions & phone calls)
@@ -41,9 +41,16 @@ The Colinas Verdes 39 website tracks **14 custom events** across 6 categories to
 **Trigger**: Form validation passes and form is submitted
 **Properties**:
 - `form`: "contact"
+- `submissionId`: Unique ID for this form session (prevents double-counting)
 - `language`: User's current language (en/nl/de/pt/sv/fr)
+- `timestamp`: Submission timestamp
 
-**Implementation**: `script.js:98-104`
+**Implementation**: `script.js:108-114`
+
+**Note**: The `submissionId` is generated when the page loads and remains constant for the session. This allows you to:
+- Deduplicate submissions if a user accidentally submits twice
+- Track time from form interaction to submission
+- Correlate form submissions with other events in the same session
 
 ---
 
@@ -135,9 +142,25 @@ The Colinas Verdes 39 website tracks **14 custom events** across 6 categories to
 
 ---
 
+### 📝 **Form Engagement Events**
+
+#### 10. `form-interaction-start`
+**Description**: User started interacting with the contact form (first focus or input)
+**Trigger**: First time user focuses on or types in any form field
+**Properties**:
+- `form`: "contact"
+- `submissionId`: Unique ID for this form session
+- `language`: User's current language
+
+**Implementation**: `script.js:131-156`
+
+**Use Case**: Track form abandonment rate by comparing `form-interaction-start` to `form-submission` events
+
+---
+
 ### 🧭 **Navigation & Flow Events**
 
-#### 10. `navigation-click`
+#### 11. `navigation-click`
 **Description**: User clicked a navigation menu item
 **Trigger**: Click on nav links (Overview, Gallery, Features, Location, Contact)
 **Properties**:
@@ -148,7 +171,7 @@ The Colinas Verdes 39 website tracks **14 custom events** across 6 categories to
 
 ---
 
-#### 11. `language-change`
+#### 12. `language-change`
 **Description**: User switched to a different language version
 **Trigger**: Language selector change
 **Properties**:
@@ -159,7 +182,7 @@ The Colinas Verdes 39 website tracks **14 custom events** across 6 categories to
 
 ---
 
-#### 12. `external-link-click`
+#### 13. `external-link-click`
 **Description**: User clicked an external link
 **Trigger**: Click on any external domain link
 **Properties**:
@@ -172,7 +195,7 @@ The Colinas Verdes 39 website tracks **14 custom events** across 6 categories to
 
 ### 📈 **Depth Metrics**
 
-#### 13. `scroll-depth`
+#### 14. `scroll-depth`
 **Description**: User scrolled to specific page depth milestones
 **Trigger**: Reaching 25%, 50%, 75%, or 100% of page
 **Properties**:
@@ -183,7 +206,7 @@ The Colinas Verdes 39 website tracks **14 custom events** across 6 categories to
 
 ---
 
-#### 14. `time-on-page`
+#### 15. `time-on-page`
 **Description**: User spent specific time durations on page
 **Trigger**: Reaching 30s, 60s, 120s, or 300s on page
 **Properties**:
@@ -268,15 +291,18 @@ Configure these goals in Umami to track key conversion metrics:
 2. **Engagement** - `scroll-depth` (depth >= 50)
 3. **Interest** - `gallery-image-view` OR `navigation-click`
 4. **Intent** - `contact-section-view`
-5. **Conversion** - `form-submission` OR `phone-click`
+5. **Form Start** - `form-interaction-start`
+6. **Conversion** - `form-submission` OR `phone-click`
 
 **Expected Drop-off**:
 - Step 1 → 2: ~70% (30% bounce)
 - Step 2 → 3: ~80% (engaged users)
 - Step 3 → 4: ~50% (interested users)
-- Step 4 → 5: ~10-15% (conversion rate)
+- Step 4 → 5: ~30% (started form)
+- Step 5 → 6: ~70-80% (form completion rate)
 
-**Target Conversion Rate**: 3-5% (Step 1 to Step 5)
+**Target Conversion Rate**: 3-5% (Step 1 to Step 6)
+**Form Abandonment Rate**: Track Step 5 to Step 6 (target: <30% abandonment)
 
 ---
 
@@ -311,7 +337,27 @@ Configure these goals in Umami to track key conversion metrics:
 
 ---
 
-### 🔄 Funnel 4: Quick Conversion Path
+### 🔄 Funnel 4: Form Abandonment Analysis
+
+**Name**: "Form Completion Journey"
+**Purpose**: Identify where users drop off in the form
+
+**Steps**:
+1. **Contact Intent** - `contact-section-view`
+2. **Form Start** - `form-interaction-start`
+3. **Form Submission** - `form-submission`
+
+**Target Abandonment Rate**: <30% (Step 2 to Step 3)
+
+**Analysis Points**:
+- How many users view contact section but never start form? (Step 1 → 2)
+- How many users start form but don't complete? (Step 2 → 3)
+- Average time from form start to submission
+- Language-based form completion rates
+
+---
+
+### 🔄 Funnel 5: Quick Conversion Path
 
 **Name**: "Hot Lead Fast Track"
 **Purpose**: Identify users who convert quickly (high intent)
@@ -495,6 +541,10 @@ Configure these goals in Umami to track key conversion metrics:
 │ └─ Phone Actions:      [4]  📞                      │
 │                                                      │
 │ Conversion Rate:       [3.2%] 📊                    │
+│ Form Abandonment:      [22%] 🚪 (Good!)            │
+│ ├─ Form Starts:        [34]                         │
+│ └─ Completions:        [8]  (23.5% completion)      │
+│                                                      │
 │ Leads per Language:    [Chart by language]          │
 └─────────────────────────────────────────────────────┘
 ```
@@ -604,7 +654,7 @@ Configure these goals in Umami to track key conversion metrics:
    - Line 493: Umami script tag added to generated index.html
 
 4. **`script.js`** (Analytics Implementation)
-   - Lines 92-112: Form submission tracking
+   - Lines 85-156: Form submission tracking with unique IDs and interaction tracking
    - Lines 362-448: Phone tracking (click, copy, select, section view)
    - Lines 446-490: Gallery tracking
    - Lines 488-520: Scroll depth tracking
