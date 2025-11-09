@@ -1,0 +1,22 @@
+{
+  "name": "colinas-verdes-villa",
+  "version": "1.0.0",
+  "description": "Multi-language luxury villa website - Colinas Verdes 39, Lagos, Portugal",
+  "scripts": {
+    "build": "node build-i18n.js",
+    "dev": "node build-i18n.js && echo 'Build complete. Open en/index.html in your browser.'"
+  },
+  "keywords": [
+    "real-estate",
+    "villa",
+    "portugal",
+    "lagos",
+    "algarve",
+    "i18n"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <!-- English version -->
+    <url>
+        <loc>https://algarve-real-estate.com/en/</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://algarve-real-estate.com/en/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://algarve-real-estate.com/nl/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://algarve-real-estate.com/de/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://algarve-real-estate.com/pt/"/>
+        <xhtml:link rel="alternate" hreflang="sv" href="https://algarve-real-estate.com/sv/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://algarve-real-estate.com/fr/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://algarve-real-estate.com/en/"/>
+    </url>
+
+    <!-- Dutch version -->
+    <url>
+        <loc>https://algarve-real-estate.com/nl/</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://algarve-real-estate.com/en/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://algarve-real-estate.com/nl/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://algarve-real-estate.com/de/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://algarve-real-estate.com/pt/"/>
+        <xhtml:link rel="alternate" hreflang="sv" href="https://algarve-real-estate.com/sv/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://algarve-real-estate.com/fr/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://algarve-real-estate.com/en/"/>
+    </url>
+
+    <!-- German version -->
+    <url>
+        <loc>https://algarve-real-estate.com/de/</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://algarve-real-estate.com/en/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://algarve-real-estate.com/nl/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://algarve-real-estate.com/de/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://algarve-real-estate.com/pt/"/>
+        <xhtml:link rel="alternate" hreflang="sv" href="https://algarve-real-estate.com/sv/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://algarve-real-estate.com/fr/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://algarve-real-estate.com/en/"/>
+    </url>
+
+    <!-- Portuguese version -->
+    <url>
+        <loc>https://algarve-real-estate.com/pt/</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://algarve-real-estate.com/en/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://algarve-real-estate.com/nl/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://algarve-real-estate.com/de/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://algarve-real-estate.com/pt/"/>
+        <xhtml:link rel="alternate" hreflang="sv" href="https://algarve-real-estate.com/sv/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://algarve-real-estate.com/fr/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://algarve-real-estate.com/en/"/>
+    </url>
+
+    <!-- Swedish version -->
+    <url>
+        <loc>https://algarve-real-estate.com/sv/</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://algarve-real-estate.com/en/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://algarve-real-estate.com/nl/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://algarve-real-estate.com/de/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://algarve-real-estate.com/pt/"/>
+        <xhtml:link rel="alternate" hreflang="sv" href="https://algarve-real-estate.com/sv/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://algarve-real-estate.com/fr/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://algarve-real-estate.com/en/"/>
+    </url>
+
+    <!-- French version -->
+    <url>
+        <loc>https://algarve-real-estate.com/fr/</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://algarve-real-estate.com/en/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://algarve-real-estate.com/nl/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://algarve-real-estate.com/de/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://algarve-real-estate.com/pt/"/>
+        <xhtml:link rel="alternate" hreflang="sv" href="https://algarve-real-estate.com/sv/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://algarve-real-estate.com/fr/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://algarve-real-estate.com/en/"/>
+    </url>
+
+</urlset>

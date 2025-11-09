@@ -64,3 +64,6 @@ pids
 # Image optimization
 images/originals/
 optimize-images.sh
+
+# Multi-language build artifacts
+index.html.backup

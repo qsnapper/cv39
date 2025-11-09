@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "title": "Villa de Luxe à Vendre - Colinas Verdes, Lagos, Portugal | 1 045 000 €",
+    "description": "Villa de luxe de 4 chambres avec piscine à Colinas Verdes, Lagos, Portugal - 1 045 000 €. Superbe propriété de campagne avec jardins matures, sauna et salle de sport.",
+    "lang": "fr"
+  },
+  "nav": {
+    "brand": "Colinas Verdes 39",
+    "overview": "Aperçu",
+    "gallery": "Galerie",
+    "features": "Caractéristiques",
+    "location": "Localisation",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Villa de Campagne Exquise",
+    "subtitle": "Colinas Verdes, Lagos, Portugal",
+    "price": "1 045 000 €"
+  },
+  "quickFacts": {
+    "bedrooms": "Chambres",
+    "bathrooms": "Salles de Bain",
+    "builtArea": "Surface Construite",
+    "plotSize": "Taille du Terrain",
+    "swimmingPool": "Piscine"
+  },
+  "ownerBanner": {
+    "badge": "Direct du Propriétaire",
+    "benefit1": "Pas de Commission d'Agent",
+    "benefit2": "Communication Directe",
+    "benefit3": "Transaction Plus Rapide",
+    "benefit4": "Connaissance Complète de la Propriété"
+  },
+  "overview": {
+    "heading": "Un Sanctuaire Rural Rare",
+    "leadText": "Découvrez cette villa T4 exceptionnelle nichée dans le prestigieux développement Colinas Verdes dans la magnifique région de l'Algarve au Portugal, offrant le mélange parfait de tranquillité rurale et de commodité urbaine, à seulement 10 minutes du centre historique de Lagos.",
+    "paragraph1": "Cette propriété distinguée s'étend sur plus de 2 000 mètres carrés de jardins paysagers matures, avec une piscine orientée plein sud, plusieurs terrasses isolées et un charmant étang à poissons relié par des chemins sinueux. La villa illustre le raffinement de la vie portugaise avec ses intérieurs spacieux, caractérisés par des plafonds à poutres apparentes, des finitions haut de gamme et une abondance de lumière naturelle.",
+    "paragraph2": "Au-delà de son élégance architecturale, cette maison offre des équipements de style de vie exceptionnels, notamment un sauna privé, une cabine de sport dédiée et un espace bureau converti avec mezzanine – idéal pour le télétravail moderne. Des panneaux solaires écoénergétiques et une cote énergétique B soulignent l'engagement de la propriété envers le luxe durable.",
+    "highlight1": "Emplacement Privilégié - 10 min de Lagos",
+    "highlight2": "Piscine Privée & Jardins Matures",
+    "highlight3": "Installations Sauna & Salle de Sport",
+    "highlight4": "Panneaux Solaires & Efficacité Énergétique",
+    "highlight5": "Bureau à Domicile avec Mezzanine",
+    "highlight6": "Entièrement Clôturé & Sécurisé",
+    "highlight7": "Peut être Vendue Partiellement Meublée"
+  },
+  "gallery": {
+    "heading": "Galerie de la Propriété",
+    "viewImage": "Voir l'image",
+    "alts": {
+      "frontEntrance": "Entrée Principale",
+      "swimmingPool": "Piscine",
+      "poolArea": "Zone de la Piscine",
+      "landscapedGardens": "Jardins Paysagers",
+      "gardenOverview": "Vue d'Ensemble du Jardin",
+      "entranceDriveway": "Entrée & Allée",
+      "livingRoom": "Salon",
+      "livingRoomView": "Vue du Salon",
+      "livingAreaFireplace": "Coin Salon avec Cheminée",
+      "diningRoom": "Salle à Manger",
+      "diningArea": "Coin Repas",
+      "diningSpace": "Espace Repas",
+      "kitchen": "Cuisine Entièrement Équipée",
+      "hallway": "Hall d'Entrée",
+      "hallway2": "Couloir Intérieur",
+      "masterBedroom": "Chambre Principale",
+      "masterSuite": "Suite Parentale",
+      "bedroom2": "Chambre 2",
+      "bedroom3": "Chambre 3",
+      "bathroom": "Salle de Bain",
+      "ensuiteBathroom": "Salle de Bain Attenante",
+      "office": "Espace Bureau",
+      "gym": "Salle de Sport",
+      "outdoorTerrace": "Terrasse Extérieure",
+      "seatingArea": "Coin Salon Extérieur",
+      "gardenPathways": "Chemins de Jardin",
+      "gardenFeatures": "Caractéristiques du Jardin",
+      "matureLandscaping": "Aménagement Paysager Mature",
+      "gardenTerrace": "Terrasse Jardin",
+      "gardenViews": "Vues sur le Jardin",
+      "gardenGrounds": "Terrains du Jardin",
+      "gardenArea": "Zone du Jardin",
+      "propertyFeatures": "Caractéristiques de la Propriété",
+      "satelliteView": "Vue Satellite de la Propriété",
+      "floorplan": "Plan de la Propriété"
+    }
+  },
+  "features": {
+    "heading": "Caractéristiques & Commodités Exceptionnelles",
+    "interior": {
+      "title": "Excellence Intérieure",
+      "items": [
+        "Hall d'entrée spacieux avec caractère",
+        "Vaste salon avec plafonds à poutres apparentes",
+        "Cheminée design STUV",
+        "Cuisine entièrement équipée avec mobilier Keller",
+        "Appareils haut de gamme Smeg et Siemens",
+        "Salle à manger séparée",
+        "4 chambres avec placards intégrés",
+        "Suite parentale avec salle de bain attenante",
+        "3 salles de bain supplémentaires",
+        "Fenêtres double vitrage de haute qualité",
+        "Volets électriques partout",
+        "Portes en bois massif",
+        "Système de chauffage central"
+      ]
+    },
+    "outdoor": {
+      "title": "Vie en Extérieur",
+      "items": [
+        "Piscine orientée plein sud (10x5m)",
+        "Zone de piscine murée pour l'intimité",
+        "2 064m² de jardins paysagers matures",
+        "Plusieurs terrasses isolées",
+        "Étang à poissons décoratif",
+        "Chemins de jardin sinueux",
+        "Arbres matures partout",
+        "Propriété entièrement clôturée",
+        "Portails électriques automatiques",
+        "Abri de voiture et aires de stationnement"
+      ]
+    },
+    "amenities": {
+      "title": "Commodités Premium",
+      "items": [
+        "Installation de sauna privée",
+        "Cabine de sport en bois",
+        "Espace bureau converti avec mezzanine",
+        "Buanderie extérieure",
+        "Panneaux solaires pour l'eau chaude",
+        "Panneaux solaires pour la production d'électricité",
+        "Classe énergétique : B",
+        "Raccordement à l'eau de ville",
+        "Électricité de ville",
+        "Drainage par fosse septique"
+      ]
+    },
+    "lifestyle": {
+      "title": "Avantages du Style de Vie",
+      "items": [
+        "Cadre champêtre paisible",
+        "À 10 minutes du centre-ville de Lagos",
+        "Proche des plages et des terrains de golf",
+        "Parfait pour le télétravail",
+        "Idéal pour recevoir des invités",
+        "Jardins matures nécessitant peu d'entretien",
+        "Intimité et sécurité",
+        "Profitez du soleil toute l'année",
+        "Fort potentiel locatif",
+        "Excellente opportunité d'investissement"
+      ]
+    }
+  },
+  "location": {
+    "heading": "Emplacement Privilégié",
+    "subheading": "Colinas Verdes, Bensafrim, Lagos, Portugal",
+    "intro": "Située dans le développement recherché de Colinas Verdes en Algarve, au Portugal, cette propriété offre le meilleur des deux mondes – une vie rurale sereine avec un accès immédiat aux commodités urbaines.",
+    "highlights": {
+      "lagos": "Centre-ville de Lagos :",
+      "lagosValue": "10 minutes",
+      "beaches": "Plages :",
+      "beachesValue": "Courte distance en voiture de la côte immaculée de l'Algarve au Portugal",
+      "golf": "Terrains de Golf :",
+      "golfValue": "Plusieurs parcours de championnat à proximité au Portugal",
+      "airport": "Aéroport :",
+      "airportValue": "Aéroport international de Faro, Portugal, facilement accessible",
+      "dining": "Restaurants & Commerces :",
+      "diningValue": "Lagos offre d'excellentes options de restauration et de commerce"
+    },
+    "description": "Lagos est l'une des villes les plus historiques et charmantes de la région de l'Algarve au Portugal, réputée pour ses superbes plages, son port de plaisance animé, ses excellents restaurants et son riche patrimoine culturel. La région de Colinas Verdes offre une retraite paisible tout en maintenant un accès pratique à tout ce que cette belle partie du Portugal a à offrir."
+  },
+  "contact": {
+    "heading": "Parlez Directement avec le Propriétaire",
+    "subtitle": "Obtenez des informations authentiques et organisez votre visite privée directement",
+    "badge": "Contact Direct Propriétaire",
+    "infoHeading": "Informations de Contact",
+    "phone": "Téléphone :",
+    "phoneNumber": "+351 917 566 931",
+    "reference": "Référence :",
+    "referenceValue": "CV39 - Villa Colinas Verdes",
+    "whyBuyDirect": "Pourquoi Acheter Directement ?",
+    "benefits": [
+      "Économisez sur les frais de commission d'agent",
+      "Obtenez une connaissance de première main de la propriété",
+      "Horaires de visite flexibles",
+      "Négociation directe et décisions plus rapides",
+      "Informations personnelles sur la propriété et la région",
+      "Prix négociable - ouvert aux offres raisonnables",
+      "Option d'achat partiellement meublée"
+    ],
+    "form": {
+      "fullName": "Nom Complet *",
+      "email": "Adresse E-mail *",
+      "phoneLabel": "Numéro de Téléphone",
+      "message": "Message *",
+      "submit": "Envoyer la Demande",
+      "dontFillLabel": "Ne remplissez pas ceci si vous êtes humain :"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Villa Colinas Verdes. Tous droits réservés.",
+    "reference": "Référence de la Propriété : CV39"
+  }
+}
