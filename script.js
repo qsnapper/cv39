@@ -95,6 +95,14 @@ class ContactForm {
             if (!this.validateForm()) {
                 e.preventDefault();
             } else {
+                // Track form submission event in Umami
+                if (window.umami) {
+                    window.umami.track('form-submission', {
+                        form: 'contact',
+                        language: document.documentElement.lang || 'unknown'
+                    });
+                }
+
                 // Show loading state before Netlify processes the form
                 const submitBtn = this.form.querySelector('.btn-submit');
                 submitBtn.textContent = 'Sending...';
@@ -356,6 +364,301 @@ class PropertyMap {
 }
 
 // ==========================================
+// Phone Number Tracking
+// ==========================================
+
+class PhoneTracking {
+    constructor() {
+        this.contactSectionViewed = false;
+        this.init();
+    }
+
+    init() {
+        // Track phone number clicks
+        const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+        phoneLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.umami) {
+                    window.umami.track('phone-click', {
+                        phone: link.textContent.trim(),
+                        language: document.documentElement.lang || 'unknown',
+                        source: 'contact-section'
+                    });
+                }
+            });
+        });
+
+        // Track when user views the contact section (indicates interest)
+        this.trackContactSectionView();
+
+        // Track text selection (user selecting phone number to copy)
+        this.trackPhoneNumberSelection();
+    }
+
+    trackContactSectionView() {
+        const contactSection = document.getElementById('contact');
+        if (!contactSection) return;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !this.contactSectionViewed) {
+                    this.contactSectionViewed = true;
+                    if (window.umami) {
+                        window.umami.track('contact-section-view', {
+                            language: document.documentElement.lang || 'unknown'
+                        });
+                    }
+                }
+            });
+        }, {
+            threshold: 0.5 // Track when 50% of section is visible
+        });
+
+        observer.observe(contactSection);
+    }
+
+    trackPhoneNumberSelection() {
+        const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+        phoneLinks.forEach(link => {
+            // Track when user selects/copies the phone number
+            link.addEventListener('copy', () => {
+                if (window.umami) {
+                    window.umami.track('phone-copy', {
+                        phone: link.textContent.trim(),
+                        language: document.documentElement.lang || 'unknown'
+                    });
+                }
+            });
+
+            // Also track mouseup events (indicating selection)
+            link.addEventListener('mouseup', () => {
+                setTimeout(() => {
+                    const selection = window.getSelection().toString();
+                    if (selection && selection.includes(link.textContent.trim())) {
+                        if (window.umami) {
+                            window.umami.track('phone-select', {
+                                language: document.documentElement.lang || 'unknown'
+                            });
+                        }
+                    }
+                }, 100);
+            });
+        });
+    }
+}
+
+// ==========================================
+// Gallery Interaction Tracking
+// ==========================================
+
+class GalleryTracking {
+    constructor() {
+        this.galleryViewCount = 0;
+        this.viewedImages = new Set();
+        this.init();
+    }
+
+    init() {
+        // Track gallery image clicks
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                this.viewedImages.add(index);
+                if (window.umami) {
+                    window.umami.track('gallery-image-view', {
+                        imageIndex: index + 1,
+                        totalViewed: this.viewedImages.size,
+                        language: document.documentElement.lang || 'unknown'
+                    });
+                }
+            });
+        });
+
+        // Track when user views 5+ images (high engagement)
+        const checkEngagement = () => {
+            if (this.viewedImages.size >= 5 && window.umami) {
+                window.umami.track('gallery-high-engagement', {
+                    imagesViewed: this.viewedImages.size,
+                    language: document.documentElement.lang || 'unknown'
+                });
+                // Remove listener after tracking once
+                document.removeEventListener('click', checkEngagement);
+            }
+        };
+        document.addEventListener('click', checkEngagement);
+    }
+}
+
+// ==========================================
+// Scroll Depth Tracking
+// ==========================================
+
+class ScrollDepthTracking {
+    constructor() {
+        this.milestones = [25, 50, 75, 100];
+        this.tracked = new Set();
+        this.init();
+    }
+
+    init() {
+        window.addEventListener('scroll', debounce(() => {
+            const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+            this.milestones.forEach(milestone => {
+                if (scrollPercentage >= milestone && !this.tracked.has(milestone)) {
+                    this.tracked.add(milestone);
+                    if (window.umami) {
+                        window.umami.track('scroll-depth', {
+                            depth: milestone,
+                            language: document.documentElement.lang || 'unknown'
+                        });
+                    }
+                }
+            });
+        }, 500));
+    }
+}
+
+// ==========================================
+// Navigation Click Tracking
+// ==========================================
+
+class NavigationTracking {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        // Track nav menu clicks
+        const navLinks = document.querySelectorAll('.nav-menu a, .scroll-indicator');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const section = link.getAttribute('href').replace('#', '');
+                if (window.umami && section) {
+                    window.umami.track('navigation-click', {
+                        section: section,
+                        language: document.documentElement.lang || 'unknown'
+                    });
+                }
+            });
+        });
+
+        // Track language changes
+        const languageSelect = document.getElementById('languageSelect');
+        if (languageSelect) {
+            languageSelect.addEventListener('change', (e) => {
+                const newLang = e.target.value.match(/\/(en|nl|de|pt|sv|fr)\//)?.[1];
+                if (window.umami && newLang) {
+                    window.umami.track('language-change', {
+                        from: document.documentElement.lang || 'unknown',
+                        to: newLang
+                    });
+                }
+            });
+        }
+    }
+}
+
+// ==========================================
+// Map Interaction Tracking
+// ==========================================
+
+class MapTracking {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        const mapElement = document.getElementById('propertyMap');
+        if (!mapElement) return;
+
+        // Track when map comes into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && window.umami) {
+                    window.umami.track('map-view', {
+                        language: document.documentElement.lang || 'unknown'
+                    });
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.3 });
+
+        observer.observe(mapElement);
+
+        // Track map interactions (clicks, zooms)
+        mapElement.addEventListener('click', () => {
+            if (window.umami) {
+                window.umami.track('map-interaction', {
+                    language: document.documentElement.lang || 'unknown'
+                });
+            }
+        }, { once: true }); // Only track first interaction
+    }
+}
+
+// ==========================================
+// Time on Page Tracking
+// ==========================================
+
+class TimeOnPageTracking {
+    constructor() {
+        this.startTime = Date.now();
+        this.milestones = [30, 60, 120, 300]; // seconds
+        this.tracked = new Set();
+        this.init();
+    }
+
+    init() {
+        setInterval(() => {
+            const timeSpent = Math.floor((Date.now() - this.startTime) / 1000);
+
+            this.milestones.forEach(milestone => {
+                if (timeSpent >= milestone && !this.tracked.has(milestone)) {
+                    this.tracked.add(milestone);
+                    if (window.umami) {
+                        window.umami.track('time-on-page', {
+                            seconds: milestone,
+                            language: document.documentElement.lang || 'unknown'
+                        });
+                    }
+                }
+            });
+        }, 5000); // Check every 5 seconds
+    }
+}
+
+// ==========================================
+// External Link Tracking
+// ==========================================
+
+class ExternalLinkTracking {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        // Track any external links (social media, etc.)
+        document.addEventListener('click', (e) => {
+            const link = e.target.closest('a');
+            if (link && link.href && (link.hostname !== window.location.hostname || link.href.startsWith('tel:') || link.href.startsWith('mailto:'))) {
+                if (window.umami) {
+                    const linkType = link.href.startsWith('tel:') ? 'phone' :
+                                    link.href.startsWith('mailto:') ? 'email' : 'external';
+
+                    if (linkType === 'external') {
+                        window.umami.track('external-link-click', {
+                            url: link.href,
+                            language: document.documentElement.lang || 'unknown'
+                        });
+                    }
+                }
+            }
+        });
+    }
+}
+
+// ==========================================
 // Initialize All Components
 // ==========================================
 
@@ -369,6 +672,15 @@ document.addEventListener('DOMContentLoaded', () => {
     new PlaceholderImages();
     new MobileMenu();
     new PropertyMap();
+    new PhoneTracking();
+
+    // Initialize tracking components
+    new GalleryTracking();
+    new ScrollDepthTracking();
+    new NavigationTracking();
+    new MapTracking();
+    new TimeOnPageTracking();
+    new ExternalLinkTracking();
 
     console.log('Colinas Verdes Villa website initialized successfully!');
 });
