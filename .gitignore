@@ -66,4 +66,4 @@ images/originals/
 optimize-images.sh
 
 # Multi-language build artifacts
-index.html.backup
+# Note: index.html.backup is now committed to ensure Netlify has the template

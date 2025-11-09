@@ -438,11 +438,27 @@ ${options}
 function buildLanguageVersions() {
   console.log('Building multi-language versions...\n');
 
-  // Read the template (use backup if it exists, otherwise use index.html)
+  // Setup paths
   const rootIndexBackup = path.join(__dirname, 'index.html.backup');
   const rootIndexPath = path.join(__dirname, 'index.html');
-  const templatePath = fs.existsSync(rootIndexBackup) ? rootIndexBackup : rootIndexPath;
-  const templateHTML = fs.readFileSync(templatePath, 'utf8');
+
+  // IMPORTANT: Always backup the original file FIRST if backup doesn't exist
+  // This ensures we have the full property page template, not the language selector
+  if (!fs.existsSync(rootIndexBackup)) {
+    const currentIndexContent = fs.readFileSync(rootIndexPath, 'utf8');
+    // Only backup if it's the actual property page (>10KB), not the language selector (~2KB)
+    if (currentIndexContent.length > 10000) {
+      fs.writeFileSync(rootIndexBackup, currentIndexContent, 'utf8');
+      console.log('✓ Backed up original index.html to index.html.backup\n');
+    } else {
+      console.error('ERROR: index.html appears to be the language selector page, not the property template!');
+      console.error('Please restore the original property page to index.html before building.');
+      process.exit(1);
+    }
+  }
+
+  // Read the template (always use backup now that we've ensured it exists)
+  const templateHTML = fs.readFileSync(rootIndexBackup, 'utf8');
 
   // Generate each language version
   languages.forEach(lang => {
@@ -528,12 +544,7 @@ function buildLanguageVersions() {
 </body>
 </html>`;
 
-  // Backup original if not already backed up (already defined above)
-  if (!fs.existsSync(rootIndexBackup)) {
-    fs.copyFileSync(rootIndexPath, rootIndexBackup);
-    console.log('\n✓ Backed up original index.html to index.html.backup');
-  }
-
+  // Write the language selection page to root
   fs.writeFileSync(rootIndexPath, redirectHTML, 'utf8');
   console.log('✓ Created language selection page at root index.html');
 
