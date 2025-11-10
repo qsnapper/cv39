@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Thank You - Colinas Verdes 39</title>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="00643849-5c2d-4e5b-9095-85fe1a7e3f48"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Thank You Page Specific Styles */
+        .thank-you-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--dark-navy) 0%, var(--medium-navy) 100%);
+            padding: 20px;
+        }
+
+        .thank-you-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 60px 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thank-you-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-gold) 0%, var(--light-gold) 100%);
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            animation: scaleIn 0.5s ease-out;
+        }
+
+        .success-icon svg {
+            width: 45px;
+            height: 45px;
+            stroke: var(--white);
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+            animation: checkmark 0.6s ease-out 0.3s;
+            stroke-dasharray: 50;
+            stroke-dashoffset: 50;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes checkmark {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .thank-you-title {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--dark-navy);
+            font-weight: 600;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .animated-text {
+            animation: fadeInOut 2s ease-in-out;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            20%, 80% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .all-languages {
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .all-languages.show {
+            display: flex;
+        }
+
+        .language-item {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            padding: 8px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .language-item:hover {
+            background: var(--cream);
+            transform: translateX(5px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .thank-you-message {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .redirect-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin: 25px 0;
+            padding: 15px;
+            background: var(--cream);
+            border-radius: 10px;
+        }
+
+        .countdown {
+            font-weight: 600;
+            color: var(--primary-gold);
+            font-size: 1.1rem;
+        }
+
+        .btn-return {
+            display: inline-block;
+            padding: 14px 35px;
+            background: var(--primary-gold);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-return:hover {
+            background: var(--dark-navy);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(201, 169, 97, 0.3);
+        }
+
+        .brand {
+            font-family: 'Georgia', serif;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 768px) {
+            .thank-you-card {
+                padding: 40px 25px;
+            }
+
+            .thank-you-title {
+                font-size: 2.2rem;
+                min-height: 60px;
+            }
+
+            .language-item {
+                font-size: 1.1rem;
+            }
+
+            .thank-you-message {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-wrapper">
+        <div class="thank-you-card">
+            <div class="success-icon">
+                <svg viewBox="0 0 52 52">
+                    <polyline points="14 27 22 35 38 19"/>
+                </svg>
+            </div>
+
+            <div class="thank-you-title" id="animatedTitle">
+                <span class="animated-text">Thank you</span>
+            </div>
+
+            <div class="all-languages" id="allLanguages">
+                <div class="language-item">🇬🇧 Thank you</div>
+                <div class="language-item">🇳🇱 Dank je wel</div>
+                <div class="language-item">🇩🇪 Vielen Dank</div>
+                <div class="language-item">🇵🇹 Obrigado</div>
+                <div class="language-item">🇸🇪 Tack</div>
+                <div class="language-item">🇫🇷 Merci</div>
+            </div>
+
+            <p class="thank-you-message">
+                Your message has been successfully received.<br>
+                We'll get back to you as soon as possible!
+            </p>
+
+            <div class="redirect-info">
+                <span>Redirecting in <span class="countdown" id="countdown">10</span> seconds...</span>
+            </div>
+
+            <a href="#" class="btn-return" id="returnBtn">Return Now</a>
+
+            <div class="brand">Colinas Verdes 39</div>
+        </div>
+    </div>
+
+    <script>
+        // Language data with translations
+        const languages = [
+            { emoji: '🇬🇧', text: 'Thank you', lang: 'en' },
+            { emoji: '🇳🇱', text: 'Dank je wel', lang: 'nl' },
+            { emoji: '🇩🇪', text: 'Vielen Dank', lang: 'de' },
+            { emoji: '🇵🇹', text: 'Obrigado', lang: 'pt' },
+            { emoji: '🇸🇪', text: 'Tack', lang: 'sv' },
+            { emoji: '🇫🇷', text: 'Merci', lang: 'fr' }
+        ];
+
+        // Detect source language from referrer or URL parameter
+        function getSourceLanguage() {
+            // Check URL parameter first
+            const urlParams = new URLSearchParams(window.location.search);
+            const langParam = urlParams.get('lang');
+            if (langParam) return langParam;
+
+            // Check referrer
+            const referrer = document.referrer;
+            if (referrer) {
+                const match = referrer.match(/\/(en|nl|de|pt|sv|fr)\//);
+                if (match) return match[1];
+            }
+
+            // Default to English
+            return 'en';
+        }
+
+        // Get return URL
+        function getReturnUrl() {
+            const lang = getSourceLanguage();
+            return `/${lang}/`;
+        }
+
+        // Animate through languages
+        function animateLanguages() {
+            const titleElement = document.getElementById('animatedTitle');
+            const allLanguagesElement = document.getElementById('allLanguages');
+            let currentIndex = 0;
+
+            // Cycle through each language
+            const interval = setInterval(() => {
+                currentIndex++;
+                if (currentIndex < languages.length) {
+                    const lang = languages[currentIndex];
+                    titleElement.innerHTML = `<span class="animated-text">${lang.emoji} ${lang.text}</span>`;
+                } else {
+                    // After cycling, show all languages
+                    clearInterval(interval);
+                    titleElement.style.display = 'none';
+                    allLanguagesElement.classList.add('show');
+                }
+            }, 2000); // Change language every 2 seconds
+        }
+
+        // Countdown and redirect
+        function startCountdown() {
+            let seconds = 10;
+            const countdownElement = document.getElementById('countdown');
+            const returnUrl = getReturnUrl();
+
+            const countdownInterval = setInterval(() => {
+                seconds--;
+                countdownElement.textContent = seconds;
+
+                if (seconds <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = returnUrl;
+                }
+            }, 1000);
+
+            // Set return button URL
+            document.getElementById('returnBtn').href = returnUrl;
+        }
+
+        // Track form success event in Umami
+        function trackFormSuccess() {
+            const sourceLanguage = getSourceLanguage();
+
+            if (window.umami) {
+                window.umami.track('form-success', {
+                    language: sourceLanguage,
+                    timestamp: new Date().toISOString()
+                });
+            }
+        }
+
+        // Initialize on page load
+        window.addEventListener('load', () => {
+            animateLanguages();
+            startCountdown();
+            trackFormSuccess();
+        });
+    </script>
+</body>
+</html>
