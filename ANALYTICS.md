@@ -281,94 +281,169 @@ Configure these goals in Umami to track key conversion metrics:
 
 ## Recommended Funnels
 
-### 🔄 Funnel 1: Primary Conversion Path
+> **Note**: Umami funnel limitations:
+> - Cannot filter events by property values (e.g., `depth >= 50`)
+> - Cannot use OR logic between different events in a single step
+> - Must specify exact page URLs (no wildcards for "any language page")
+> - Time-based filtering within funnels is not supported
 
-**Name**: "Visitor to Lead"
-**Purpose**: Track complete conversion journey
+---
+
+### 🔄 Funnel 1: Primary Form Conversion Path
+
+**Name**: "Visitor to Form Lead"
+**Purpose**: Track complete conversion journey ending in form submission
 
 **Steps**:
-1. **Landing** - Page View (any language page)
-2. **Engagement** - `scroll-depth` (depth >= 50)
-3. **Interest** - `gallery-image-view` OR `navigation-click`
-4. **Intent** - `contact-section-view`
-5. **Form Start** - `form-interaction-start`
-6. **Conversion** - `form-submission` OR `phone-click`
+1. **Landing** - Page View: `/en/index.html` (or choose your primary language)
+2. **Engagement** - Event: `scroll-depth` (includes all depth values)
+3. **Interest** - Event: `gallery-image-view`
+4. **Intent** - Event: `contact-section-view`
+5. **Form Start** - Event: `form-interaction-start`
+6. **Conversion** - Event: `form-submission`
 
 **Expected Drop-off**:
 - Step 1 → 2: ~70% (30% bounce)
-- Step 2 → 3: ~80% (engaged users)
-- Step 3 → 4: ~50% (interested users)
+- Step 2 → 3: ~60% (engaged users scroll and explore)
+- Step 3 → 4: ~50% (interested in property)
 - Step 4 → 5: ~30% (started form)
 - Step 5 → 6: ~70-80% (form completion rate)
 
 **Target Conversion Rate**: 3-5% (Step 1 to Step 6)
 **Form Abandonment Rate**: Track Step 5 to Step 6 (target: <30% abandonment)
 
+**Setup**: Create separate funnels for each language page (en, nl, de, pt, sv, fr)
+
 ---
 
-### 🔄 Funnel 2: Gallery Engagement Path
+### 🔄 Funnel 2: Primary Phone Conversion Path
 
-**Name**: "Gallery to Inquiry"
-**Purpose**: Measure gallery effectiveness in driving conversions
+**Name**: "Visitor to Phone Lead"
+**Purpose**: Track complete conversion journey ending in phone contact
 
 **Steps**:
-1. **Gallery Entry** - `gallery-image-view` (first view)
-2. **Multiple Views** - `gallery-image-view` (totalViewed >= 3)
-3. **High Engagement** - `gallery-high-engagement`
-4. **Contact Intent** - `contact-section-view`
-5. **Conversion** - `form-submission` OR `phone-click`
+1. **Landing** - Page View: `/en/index.html` (or choose your primary language)
+2. **Engagement** - Event: `scroll-depth`
+3. **Interest** - Event: `gallery-image-view`
+4. **Intent** - Event: `contact-section-view`
+5. **Conversion** - Event: `phone-click`
+
+**Target Conversion Rate**: 1-2% (Step 1 to Step 5)
+
+**Setup**: Create separate funnels for each language page (en, nl, de, pt, sv, fr)
+
+---
+
+### 🔄 Funnel 3: Gallery Engagement to Form
+
+**Name**: "Gallery to Form Inquiry"
+**Purpose**: Measure gallery effectiveness in driving form conversions
+
+**Steps**:
+1. **Gallery Entry** - Event: `gallery-image-view`
+2. **High Engagement** - Event: `gallery-high-engagement`
+3. **Contact Intent** - Event: `contact-section-view`
+4. **Form Start** - Event: `form-interaction-start`
+5. **Conversion** - Event: `form-submission`
 
 **Target Conversion Rate**: 15-25% (highly engaged visitors)
 
+**Note**: This funnel works across all languages (no page view filter needed)
+
 ---
 
-### 🔄 Funnel 3: Phone Engagement Path
+### 🔄 Funnel 4: Gallery Engagement to Phone
 
-**Name**: "Phone Contact Journey"
-**Purpose**: Track phone-based conversion path
+**Name**: "Gallery to Phone Inquiry"
+**Purpose**: Measure gallery effectiveness in driving phone conversions
 
 **Steps**:
-1. **Page View** - Landing
-2. **Contact View** - `contact-section-view`
-3. **Phone Interest** - `phone-select` OR hover on phone
-4. **Phone Action** - `phone-click` OR `phone-copy`
+1. **Gallery Entry** - Event: `gallery-image-view`
+2. **High Engagement** - Event: `gallery-high-engagement`
+3. **Contact Intent** - Event: `contact-section-view`
+4. **Conversion** - Event: `phone-click`
 
-**Target Conversion Rate**: 8-12%
+**Target Conversion Rate**: 8-12% (highly engaged visitors)
+
+**Note**: This funnel works across all languages (no page view filter needed)
 
 ---
 
-### 🔄 Funnel 4: Form Abandonment Analysis
+### 🔄 Funnel 5: Form Abandonment Analysis
 
 **Name**: "Form Completion Journey"
 **Purpose**: Identify where users drop off in the form
 
 **Steps**:
-1. **Contact Intent** - `contact-section-view`
-2. **Form Start** - `form-interaction-start`
-3. **Form Submission** - `form-submission`
+1. **Contact Intent** - Event: `contact-section-view`
+2. **Form Start** - Event: `form-interaction-start`
+3. **Form Submission** - Event: `form-submission`
 
 **Target Abandonment Rate**: <30% (Step 2 to Step 3)
 
 **Analysis Points**:
 - How many users view contact section but never start form? (Step 1 → 2)
 - How many users start form but don't complete? (Step 2 → 3)
-- Average time from form start to submission
-- Language-based form completion rates
+- Use event properties to filter by language for deeper analysis
+
+**Note**: This funnel works across all languages (no page view filter needed)
 
 ---
 
-### 🔄 Funnel 5: Quick Conversion Path
+### 🔄 Funnel 6: Direct Phone Path
 
-**Name**: "Hot Lead Fast Track"
-**Purpose**: Identify users who convert quickly (high intent)
+**Name**: "Quick Phone Contact"
+**Purpose**: Track users who go straight to phone contact
 
 **Steps**:
-1. **Landing** - Page View
-2. **Fast Scroll** - `scroll-depth` (depth >= 75) within 60 seconds
-3. **Direct Contact** - `contact-section-view` within 90 seconds
-4. **Immediate Action** - `form-submission` OR `phone-click` within 180 seconds
+1. **Contact View** - Event: `contact-section-view`
+2. **Phone Interest** - Event: `phone-select`
+3. **Phone Action** - Event: `phone-click`
 
-**Target**: 5-10% of conversions (high-intent buyers)
+**Target Conversion Rate**: 20-30% (high-intent buyers)
+
+**Note**: This funnel works across all languages (no page view filter needed)
+
+---
+
+### 🔄 Funnel 7: Alternative Phone Path
+
+**Name**: "Phone Copy Journey"
+**Purpose**: Track users who copy phone number instead of clicking
+
+**Steps**:
+1. **Contact View** - Event: `contact-section-view`
+2. **Phone Interest** - Event: `phone-select`
+3. **Phone Copy** - Event: `phone-copy`
+
+**Target Conversion Rate**: 5-10%
+
+**Note**: This funnel works across all languages (no page view filter needed)
+
+---
+
+### 📋 Funnel Setup Strategy
+
+**Multi-Language Approach**:
+Since Umami requires specific page URLs, you'll need to:
+
+1. **Option A: Create language-specific funnels** (Recommended for primary conversions)
+   - Duplicate Funnel 1 & 2 for each language
+   - Compare performance across languages
+   - Example: "EN: Visitor to Form Lead", "NL: Visitor to Form Lead", etc.
+
+2. **Option B: Use event-only funnels** (Recommended for engagement tracking)
+   - Start with an event instead of page view (Funnels 3-7)
+   - Works across all languages automatically
+   - Use event properties to filter by language in analysis
+
+**Priority Setup Order**:
+1. ✅ Funnel 5: Form Abandonment Analysis (critical business metric)
+2. ✅ Funnel 3: Gallery to Form (engagement to conversion)
+3. ✅ Funnel 4: Gallery to Phone (engagement to conversion)
+4. ✅ Funnel 1: Create for your top 2-3 traffic languages
+5. ✅ Funnel 2: Create for your top 2-3 traffic languages
+6. ⚠️ Funnels 6-7: Optional, for detailed phone engagement analysis
 
 ---
 
