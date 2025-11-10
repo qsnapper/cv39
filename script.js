@@ -106,6 +106,15 @@ class ContactForm {
             } else {
                 // Track form submission event in Umami
                 if (window.umami) {
+                    // First, identify the user session with metadata (NO PII)
+                    window.umami.identify({
+                        submissionId: this.submissionId,
+                        hasSubmitted: true,
+                        language: document.documentElement.lang || 'unknown',
+                        timestamp: Date.now()
+                    });
+
+                    // Then track the submission event
                     window.umami.track('form-submission', {
                         form: 'contact',
                         submissionId: this.submissionId,
