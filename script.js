@@ -379,8 +379,8 @@ class PropertyMap {
             return;
         }
 
-        // Initialize map (zoom level 13 for wider area view)
-        this.map = L.map('propertyMap').setView(this.coordinates, 13);
+        // Initialize map (zoom level 11 for wider area view)
+        this.map = L.map('propertyMap').setView(this.coordinates, 11);
 
         // Add OpenStreetMap tiles
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
