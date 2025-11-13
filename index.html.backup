@@ -259,7 +259,7 @@
 
                 <!-- Interior - Bathrooms -->
                 <div class="gallery-item" data-category="interior">
-                    <img src="images/bathroom.jpg" alt="Bathroom" data-index="20">
+                    <img src="images/bathroom-u.jpg" alt="Bathroom" data-index="20">
                     <div class="gallery-overlay">View Image</div>
                 </div>
                 <div class="gallery-item" data-category="interior">
@@ -290,46 +290,50 @@
                     <img src="images/seating-area.jpg" alt="Outdoor Seating Area" data-index="26">
                     <div class="gallery-overlay">View Image</div>
                 </div>
+                <div class="gallery-item" data-category="exterior">
+                    <img src="images/outdoor-shower.jpg" alt="Outdoor Shower" data-index="27">
+                    <div class="gallery-overlay">View Image</div>
+                </div>
 
                 <!-- More Garden Views -->
                 <div class="gallery-item" data-category="gardens">
-                    <img src="images/garden2.jpg" alt="Garden Pathways" data-index="27">
+                    <img src="images/garden2.jpg" alt="Garden Pathways" data-index="28">
                     <div class="gallery-overlay">View Image</div>
                 </div>
                 <div class="gallery-item" data-category="gardens">
-                    <img src="images/garden3.jpg" alt="Garden Features" data-index="28">
+                    <img src="images/garden3.jpg" alt="Garden Features" data-index="29">
                     <div class="gallery-overlay">View Image</div>
                 </div>
                 <div class="gallery-item" data-category="gardens">
-                    <img src="images/garden5.jpg" alt="Mature Landscaping" data-index="29">
+                    <img src="images/garden5.jpg" alt="Mature Landscaping" data-index="30">
                     <div class="gallery-overlay">View Image</div>
                 </div>
                 <div class="gallery-item" data-category="gardens">
-                    <img src="images/garden6.jpg" alt="Garden Terrace" data-index="30">
+                    <img src="images/garden6.jpg" alt="Garden Terrace" data-index="31">
                     <div class="gallery-overlay">View Image</div>
                 </div>
                 <div class="gallery-item" data-category="gardens">
-                    <img src="images/garden7.jpg" alt="Garden Views" data-index="31">
+                    <img src="images/garden7.jpg" alt="Garden Views" data-index="32">
                     <div class="gallery-overlay">View Image</div>
                 </div>
                 <div class="gallery-item" data-category="gardens">
-                    <img src="images/garden8.jpg" alt="Garden Grounds" data-index="32">
+                    <img src="images/garden8.jpg" alt="Garden Grounds" data-index="33">
                     <div class="gallery-overlay">View Image</div>
                 </div>
                 <div class="gallery-item" data-category="gardens">
-                    <img src="images/garden9.jpg" alt="Garden Area" data-index="33">
+                    <img src="images/garden9.jpg" alt="Garden Area" data-index="34">
                     <div class="gallery-overlay">View Image</div>
                 </div>
                 <div class="gallery-item" data-category="exterior">
-                    <img src="images/wood.jpg" alt="Property Features" data-index="34">
+                    <img src="images/wood.jpg" alt="Property Features" data-index="35">
                     <div class="gallery-overlay">View Image</div>
                 </div>
                 <div class="gallery-item" data-category="exterior">
-                    <img src="images/satellite-view.jpg" alt="Satellite View of Property" data-index="35">
+                    <img src="images/satellite-view.jpg" alt="Satellite View of Property" data-index="36">
                     <div class="gallery-overlay">View Image</div>
                 </div>
                 <div class="gallery-item" data-category="exterior">
-                    <img src="images/floorplan.jpg" alt="Property Floor Plan" data-index="36">
+                    <img src="images/floorplan.jpg" alt="Property Floor Plan" data-index="37">
                     <div class="gallery-overlay">View Image</div>
                 </div>
             </div>

@@ -14,8 +14,7 @@
   },
   "hero": {
     "title": "Villa de Campagne Exquise",
-    "subtitle": "Colinas Verdes, Lagos, Portugal",
-    "price": "1 045 000 €"
+    "subtitle": "Colinas Verdes, Lagos, Portugal"
   },
   "quickFacts": {
     "bedrooms": "Chambres",
@@ -75,6 +74,7 @@
       "gym": "Salle de Sport",
       "outdoorTerrace": "Terrasse Extérieure",
       "seatingArea": "Coin Salon Extérieur",
+      "outdoorShower": "Douche Extérieure",
       "gardenPathways": "Chemins de Jardin",
       "gardenFeatures": "Caractéristiques du Jardin",
       "matureLandscaping": "Aménagement Paysager Mature",
@@ -177,9 +177,7 @@
     "badge": "Contact Direct Propriétaire",
     "infoHeading": "Informations de Contact",
     "phone": "Téléphone :",
-    "phoneNumber": "+351 917 566 931",
     "reference": "Référence :",
-    "referenceValue": "CV39 - Villa Colinas Verdes",
     "whyBuyDirect": "Pourquoi Acheter Directement ?",
     "benefits": [
       "Économisez sur les frais de commission d'agent",
@@ -201,6 +199,6 @@
   },
   "footer": {
     "copyright": "© 2025 Villa Colinas Verdes. Tous droits réservés.",
-    "reference": "Référence de la Propriété : CV39"
+    "reference": "Référence de la Propriété :"
   }
 }

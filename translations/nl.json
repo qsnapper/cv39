@@ -14,8 +14,7 @@
   },
   "hero": {
     "title": "Exquise Villa op het Platteland",
-    "subtitle": "Colinas Verdes, Lagos, Portugal",
-    "price": "€1.045.000"
+    "subtitle": "Colinas Verdes, Lagos, Portugal"
   },
   "quickFacts": {
     "bedrooms": "Slaapkamers",
@@ -75,6 +74,7 @@
       "gym": "Fitnessruimte",
       "outdoorTerrace": "Buitenterras",
       "seatingArea": "Zithoek Buiten",
+      "outdoorShower": "Buitendouche",
       "gardenPathways": "Tuinpaden",
       "gardenFeatures": "Tuinelementen",
       "matureLandscaping": "Volgroeide Beplanting",
@@ -177,9 +177,7 @@
     "badge": "Direct Contact met Eigenaar",
     "infoHeading": "Contactinformatie",
     "phone": "Telefoon:",
-    "phoneNumber": "+351 917 566 931",
     "reference": "Referentie:",
-    "referenceValue": "CV39 - Colinas Verdes Villa",
     "whyBuyDirect": "Waarom Rechtstreeks Kopen?",
     "benefits": [
       "Bespaar op makelaarscommissiekosten",
@@ -201,6 +199,6 @@
   },
   "footer": {
     "copyright": "© 2025 Colinas Verdes Villa. Alle rechten voorbehouden.",
-    "reference": "Woningreferentie: CV39"
+    "reference": "Woningreferentie:"
   }
 }

@@ -1,0 +1,20 @@
+{
+  "pricing": {
+    "amount": "€1,095,000"
+  },
+  "contact": {
+    "phoneNumber": "+351 917 566 931",
+    "reference": "CV39"
+  },
+  "specifications": {
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "builtArea": "298m²",
+    "plotSize": "2,064m²",
+    "swimmingPool": "10x5m"
+  },
+  "location": {
+    "coordinates": [37.1663858561094, -8.700731058466115],
+    "address": "Colinas Verdes, Bensafrim, Lagos, Portugal"
+  }
+}

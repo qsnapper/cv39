@@ -379,8 +379,8 @@ class PropertyMap {
             return;
         }
 
-        // Initialize map
-        this.map = L.map('propertyMap').setView(this.coordinates, 15);
+        // Initialize map (zoom level 13 for wider area view)
+        this.map = L.map('propertyMap').setView(this.coordinates, 13);
 
         // Add OpenStreetMap tiles
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -404,7 +404,6 @@ class PropertyMap {
             <div class="map-popup">
                 <h3>Colinas Verdes Villa</h3>
                 <p><strong>Reference:</strong> CV39</p>
-                <p><strong>Price:</strong> €1,045,000</p>
                 <p>4-bedroom luxury villa with pool</p>
             </div>
         `).openPopup();

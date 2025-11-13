@@ -14,8 +14,7 @@
   },
   "hero": {
     "title": "Utsökt Landsbygdsvilla",
-    "subtitle": "Colinas Verdes, Lagos, Portugal",
-    "price": "1 045 000 €"
+    "subtitle": "Colinas Verdes, Lagos, Portugal"
   },
   "quickFacts": {
     "bedrooms": "Sovrum",
@@ -75,6 +74,7 @@
       "gym": "Gymfacilitet",
       "outdoorTerrace": "Uteplats",
       "seatingArea": "Utesittplats",
+      "outdoorShower": "Utomhusdusch",
       "gardenPathways": "Trädgårdsgångar",
       "gardenFeatures": "Trädgårdsdetaljer",
       "matureLandscaping": "Mogen Landskapsarkitektur",
@@ -177,9 +177,7 @@
     "badge": "Direkt Ägarkontakt",
     "infoHeading": "Kontaktinformation",
     "phone": "Telefon:",
-    "phoneNumber": "+351 917 566 931",
     "reference": "Referens:",
-    "referenceValue": "CV39 - Colinas Verdes Villa",
     "whyBuyDirect": "Varför Köpa Direkt?",
     "benefits": [
       "Spara på agentprovisioner",
@@ -201,6 +199,6 @@
   },
   "footer": {
     "copyright": "© 2025 Colinas Verdes Villa. Alla rättigheter förbehållna.",
-    "reference": "Fastighetsreferens: CV39"
+    "reference": "Fastighetsreferens:"
   }
 }

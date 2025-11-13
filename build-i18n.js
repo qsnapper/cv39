@@ -20,7 +20,7 @@ function getTranslation(obj, path) {
 }
 
 // Helper function to replace placeholders in HTML with translation values
-function replacePlaceholders(html, translations, currentLang) {
+function replacePlaceholders(html, translations, currentLang, propertyData) {
   let result = html;
 
   // Replace meta tags
@@ -94,31 +94,32 @@ function replacePlaceholders(html, translations, currentLang) {
     /<p class="hero-subtitle">.*?<\/p>/,
     `<p class="hero-subtitle">${translations.hero.subtitle}</p>`
   );
+  // Use property data for price
   result = result.replace(
     /<div class="hero-price">.*?<\/div>/,
-    `<div class="hero-price">${translations.hero.price}</div>`
+    `<div class="hero-price">${propertyData.pricing.amount}</div>`
   );
 
-  // Quick facts
+  // Quick facts - Replace labels and values
   result = result.replace(
-    /<div class="fact-label">Bedrooms<\/div>/,
-    `<div class="fact-label">${translations.quickFacts.bedrooms}</div>`
+    /<div class="fact-label">Bedrooms<\/div>\s*<div class="fact-value">\d+<\/div>/,
+    `<div class="fact-label">${translations.quickFacts.bedrooms}</div>\n                        <div class="fact-value">${propertyData.specifications.bedrooms}</div>`
   );
   result = result.replace(
-    /<div class="fact-label">Bathrooms<\/div>/,
-    `<div class="fact-label">${translations.quickFacts.bathrooms}</div>`
+    /<div class="fact-label">Bathrooms<\/div>\s*<div class="fact-value">\d+<\/div>/,
+    `<div class="fact-label">${translations.quickFacts.bathrooms}</div>\n                        <div class="fact-value">${propertyData.specifications.bathrooms}</div>`
   );
   result = result.replace(
-    /<div class="fact-label">Built Area<\/div>/,
-    `<div class="fact-label">${translations.quickFacts.builtArea}</div>`
+    /<div class="fact-label">Built Area<\/div>\s*<div class="fact-value">[^<]+<\/div>/,
+    `<div class="fact-label">${translations.quickFacts.builtArea}</div>\n                        <div class="fact-value">${propertyData.specifications.builtArea}</div>`
   );
   result = result.replace(
-    /<div class="fact-label">Plot Size<\/div>/,
-    `<div class="fact-label">${translations.quickFacts.plotSize}</div>`
+    /<div class="fact-label">Plot Size<\/div>\s*<div class="fact-value">[^<]+<\/div>/,
+    `<div class="fact-label">${translations.quickFacts.plotSize}</div>\n                        <div class="fact-value">${propertyData.specifications.plotSize}</div>`
   );
   result = result.replace(
-    /<div class="fact-label">Swimming Pool<\/div>/,
-    `<div class="fact-label">${translations.quickFacts.swimmingPool}</div>`
+    /<div class="fact-label">Swimming Pool<\/div>\s*<div class="fact-value">[^<]+<\/div>/,
+    `<div class="fact-label">${translations.quickFacts.swimmingPool}</div>\n                        <div class="fact-value">${propertyData.specifications.swimmingPool}</div>`
   );
 
   // Owner banner
@@ -228,6 +229,7 @@ function replacePlaceholders(html, translations, currentLang) {
     'Gym Facility': translations.gallery.alts.gym,
     'Outdoor Terrace': translations.gallery.alts.outdoorTerrace,
     'Outdoor Seating Area': translations.gallery.alts.seatingArea,
+    'Outdoor Shower': translations.gallery.alts.outdoorShower,
     'Garden Pathways': translations.gallery.alts.gardenPathways,
     'Garden Features': translations.gallery.alts.gardenFeatures,
     'Mature Landscaping': translations.gallery.alts.matureLandscaping,
@@ -342,17 +344,15 @@ ${listHTML}
     /<h3>Contact Information<\/h3>/,
     `<h3>${translations.contact.infoHeading}</h3>`
   );
+  // Replace phone number with property data
   result = result.replace(
-    /<strong>Phone:<\/strong>/,
-    `<strong>${translations.contact.phone}</strong>`
+    /<strong>Phone:<\/strong>\s*<a href="tel:[^"]*">.*?<\/a>/,
+    `<strong>${translations.contact.phone}</strong> <a href="tel:${propertyData.contact.phoneNumber}">${propertyData.contact.phoneNumber}</a>`
   );
+  // Replace reference with property data
   result = result.replace(
-    /<strong>Reference:<\/strong>/,
-    `<strong>${translations.contact.reference}</strong>`
-  );
-  result = result.replace(
-    /CV39 - Colinas Verdes Villa/,
-    translations.contact.referenceValue
+    /<strong>Reference:<\/strong>\s*[^<]*/,
+    `<strong>${translations.contact.reference}</strong> ${propertyData.contact.reference}`
   );
   result = result.replace(
     /<h4>Why Buy Direct\?<\/h4>/,
@@ -402,9 +402,10 @@ ${benefitsHTML}
     /&copy; 2025 Colinas Verdes Villa\. All rights reserved\./,
     translations.footer.copyright
   );
+  // Update footer reference with property data
   result = result.replace(
-    /<p class="footer-ref">Property Reference: CV39<\/p>/,
-    `<p class="footer-ref">${translations.footer.reference}</p>`
+    /<p class="footer-ref">Property Reference: [^<]*<\/p>/,
+    `<p class="footer-ref">${translations.footer.reference} ${propertyData.contact.reference}</p>`
   );
 
   return result;
@@ -460,6 +461,10 @@ function buildLanguageVersions() {
   // Read the template (always use backup now that we've ensured it exists)
   const templateHTML = fs.readFileSync(rootIndexBackup, 'utf8');
 
+  // Load property data (shared across all languages)
+  const propertyDataPath = path.join(__dirname, 'property-data.json');
+  const propertyData = JSON.parse(fs.readFileSync(propertyDataPath, 'utf8'));
+
   // Generate each language version
   languages.forEach(lang => {
     console.log(`Building ${languageNames[lang]} (${lang})...`);
@@ -469,7 +474,7 @@ function buildLanguageVersions() {
     const translations = JSON.parse(fs.readFileSync(translationsPath, 'utf8'));
 
     // Replace placeholders
-    const localizedHTML = replacePlaceholders(templateHTML, translations, lang);
+    const localizedHTML = replacePlaceholders(templateHTML, translations, lang, propertyData);
 
     // Write to language directory
     const outputDir = path.join(__dirname, lang);

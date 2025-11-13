@@ -14,8 +14,7 @@
   },
   "hero": {
     "title": "Moradia de Campo Requintada",
-    "subtitle": "Colinas Verdes, Lagos, Portugal",
-    "price": "€1.045.000"
+    "subtitle": "Colinas Verdes, Lagos, Portugal"
   },
   "quickFacts": {
     "bedrooms": "Quartos",
@@ -75,6 +74,7 @@
       "gym": "Ginásio",
       "outdoorTerrace": "Terraço Exterior",
       "seatingArea": "Área de Estar Exterior",
+      "outdoorShower": "Duche Exterior",
       "gardenPathways": "Caminhos do Jardim",
       "gardenFeatures": "Características do Jardim",
       "matureLandscaping": "Paisagismo Maduro",
@@ -177,9 +177,7 @@
     "badge": "Contato Direto com o Proprietário",
     "infoHeading": "Informações de Contato",
     "phone": "Telefone:",
-    "phoneNumber": "+351 917 566 931",
     "reference": "Referência:",
-    "referenceValue": "CV39 - Moradia Colinas Verdes",
     "whyBuyDirect": "Porquê Comprar Diretamente?",
     "benefits": [
       "Poupe nas taxas de comissão de agente",
@@ -201,6 +199,6 @@
   },
   "footer": {
     "copyright": "© 2025 Moradia Colinas Verdes. Todos os direitos reservados.",
-    "reference": "Referência do Imóvel: CV39"
+    "reference": "Referência do Imóvel:"
   }
 }
